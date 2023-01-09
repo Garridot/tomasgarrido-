@@ -150,9 +150,17 @@ nav ul li a:hover{
     header{
         background: #030303;
         animation: none !important;
+        font-size: small !important;
         
     }
 } 
+
+@media (max-width: 600px){
+    nav ul li {
+        margin: 4rem 0 !important;
+        font-size: small !important;
+}
+}
 
 
 
@@ -378,6 +386,9 @@ section{
     .per-title p {
         transform: rotate(0deg);
     }
+    .perfil .per-text {        
+        font-size: small;
+    }
 }
 
 .skills{
@@ -429,27 +440,24 @@ section{
 }
 
 @media(max-width:600px){
+    .frontend{
+        margin-bottom: 10rem;
+    }
     .skills .frontend,.skills .backend{
         display: block;
     }
     .skills .head-skill span p{       
         transform: none;
+        font-size: smaller;
     }
     .skills ul li{        
-        font-size: x-large;
+        font-size: medium;
     }
     
     
 }
 
-@media(max-width:400px){
-    
-    .skills ul li{        
-        font-size: large;
-    }
-    
-    
-}
+
 
 
 .container-projs{
@@ -473,6 +481,11 @@ section{
     color: rgb(141, 141, 141);
 }
 
+@media(max-width:600px){
+    #projects .proj-title p{
+        font-size: larger;
+    }
+} 
 .proj{
     display: flex;
     min-width: 100%; 
@@ -549,7 +562,15 @@ section{
     }
 }
 
-
+@media (max-width: 600px){
+    .proj .col {        
+        padding: 0 1rem !important;
+        font-size: small;
+    }
+    .proj h3{
+        font-size: calc(1.3rem + .6vw) !important;
+    }
+}
 
 
 #contact{
@@ -620,14 +641,27 @@ footer .f-ul{
     }    
 }
 
+@media(max-width:600px){
+    #contact .cont-info{
+        margin: 0 1rem;
+    }
+    #contact h5 {        
+        font-size: larger;       
+    }
+    #contact p {
+        margin: 3rem 0 0;        
+        font-size: small;
+    }
+}
+
 @media(max-width:600px) {
     .f-ul{
         display: block !important;
         text-align: center;
     }
     .f-li{
-        margin: 0 0 30px 0 !important;
-        font-size: 1.2rem;
+        font-size: smaller;
+        margin-top: 5rem !important;
     }  
 }
 
