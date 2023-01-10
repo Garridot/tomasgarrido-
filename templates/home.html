@@ -20,8 +20,9 @@
 
     <script src="https://kit.fontawesome.com/47100a983e.js" crossorigin="anonymous"></script>
     <!-- Css -->
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/portfolio.css')}}">    
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/portfolio.css')}}"> 
 </head>
+
 <body style="overflow-x: hidden;">    
     <header  id="nav" >
         <nav>
@@ -34,25 +35,23 @@
             </div>
             <ul class="list-nav">
                 <li><a href="#perfil">About Me</a></li>
+                <li><a href="#skills">Skills</a></li>   
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#contact">Contact</a></li>                
             </ul>
         </nav>
     </header>
     <main class="row">
-        <div class="text col">
-            <div class="t-main">
-                <h1>Tomas Garrido</h1>
-                <h2>Python Developer</h2>                
-                <p>
-                    Python - Django Rest - SQL - HTML - CSS
-                </p>                
+            <div class="text col">
+                <div class="t-main">
+                    <h1>Tomas Garrido</h1>
+                    <h2>Python Developer</h2>                
+                    <p>Python - Django Rest - SQL - HTML - CSS</p>                
+                </div>
             </div>
-        </div>
-        <div class="t-img col"> 
-                 
-            <img src="{{url_for('static', filename='media/2_3_2.png')}}" class="img-fluid" id="n_1">
-        </div>
+            <div class="t-img col">
+                <div class="img-main"></div>
+            </div>          
     </main>    
     <section class="perfil" id="perfil">
         <div class="row">
@@ -76,10 +75,8 @@
             </div>            
         </div>  
         
-    </section> 
-
-    
-    <section class="skills">
+    </section>     
+    <section class="skills" id="skills">
         <div class="frontend" data-aos="fade-up">
             <div class="head-skill col-4">
                 <span>
@@ -109,90 +106,74 @@
             </ul>
         </div>
     </section>
-
-    
-
     <section id="projects">
         <div class="proj-title" data-aos="fade-up">
             <p>Projects</p>
-        </div>  
-        
-        
-        <div class="container-projs">            
-            <div class="proj row" style="--i:0" data-aos="fade-up">
-                <a href="https://football-player-graphics.herokuapp.com/">
-                    <div class="proj-info col">
-                        <h3>FOOTBALL PLAYER CHARTS</h3>
-                        <span class="tech"><p style="color: #aaa;">
-                            <strong>Python - Django Rest - Pandas - BeautifulSoup4</strong>
-                        </p></span>
-                        <span class="proj-text">
-                            <p>                            
-                                Football Player Charts is a football statistics website where you will find information, statistics, and charts that show how influenced a player in each team he played.
-                            </p>
-                        </span>
-                    </div>
+        </div> 
+        <div class="container-projs">   
+
+            <div class="proj row" id="football_proj__" data-aos="fade-up">
+                <a href="https://football-player-charts.onrender.com/">
+                    <div class="featured--vertical">
+                        <div class="featured--horizontal">
+                            <div class="proj-info col">
+                                <h3>FOOTBALL PLAYER CHARTS</h3>
+                                <span class="tech"><p>
+                                    <strong>Python - Django Rest - Pandas - BeautifulSoup4</strong>
+                                </p></span>
+                                <span class="proj-text">
+                                    <p>                            
+                                        Football Player Charts is a football statistics website where you will find information, statistics, and charts that show how influenced a player in each team he played.
+                                    </p>
+                                </span>
+                            </div>
+                        </div>
+                    </div>                    
                 </a>                   
             </div>
-            <div class="proj row" style="--i:1" data-aos="fade-up">  
-                 
-                <a href="https://inflation-calculator-arg-x4iu.onrender.com/">
-                    <div class="proj-info col">
-                        <h3>Inflation Calculator</h3>
-                        <span class="tech"><p style="color: #aaa;">
-                            <strong>JavaScript - Python - Django Rest - Html - Css</strong>
-                        </p></span>
-                        <span class="proj-text">
-                            <p>                            
-                                Calculator that shows the value of an amount over time based on inflation 
-                                and the consumer price index (CPI).
-                            </p>
-                        </span>
-                    </div> 
-                </a>
-                                 
-            </div>
-            <div class="proj row" style="--i:3" data-aos="fade-up">
-                
-                <a href="https://web-academy-heroku.herokuapp.com/">
-                    <div class="proj-info col">
-                        <h3>Web Academy</h3>
-                        <span class="tech"><p style="color: #aaa;">
-                            <strong>Python - Django - JavaScript - Html - Css</strong>
-                        </p></span>
-                        <span class="proj-text">
-                            <p>
-                                A web site the students will can see his courses, learning material,
-                                notifications, events, send and receive homeworks.
-                            </p>
-                        </span>
-                    </div> 
+            <div class="proj row" style="--i:3" data-aos="fade-up" id="classroom_proj__">                
+                <a href="https://github.com/Garridot/Classroom/tree/master/classroom">
+                    <div class="featured--vertical">
+                        <div class="featured--horizontal">
+                            <div class="proj-info col">
+                                <h3>Web Academy</h3>
+                                <span class="tech"><p>
+                                    <strong>Python - Django - JavaScript - Html - Css</strong>
+                                </p></span>
+                                <span class="proj-text">
+                                    <p>
+                                        A web site the students will can see his courses, learning material,
+                                        notifications, events, send and receive homeworks.
+                                    </p>
+                                </span>
+                            </div> 
+                        </div>
+                    </div>
                 </a>                  
             </div>
-            <div class="proj row" style="--i:4" data-aos="fade-up"> 
-                
-                <a href="https://compare-difference.herokuapp.com/">
-                    <div class="proj-info col">
-                        <h3>Compare Difference</h3>
-                        <span class="tech"><p style="color: #aaa;">
-                            <strong>Python - Django - Html - Css</strong>
-                        </p></span>
-                        <span class="proj-text">
-                            <p>                            
-                                A web site where you can find the difference between two text files.
-                            </p>
-                        </span>
-                    </div>  
-                </a>  
-                             
+            <div class="proj row" style="--i:1" data-aos="fade-up" id="inflation_calculator_proj">                   
+                <a href="https://inflation-calculator-arg-x4iu.onrender.com/">
+                    <div class="featured--vertical">
+                        <div class="featured--horizontal">
+                            <div class="proj-info col">
+                                <h3>Inflation Calculator</h3>
+                                <span class="tech"><p>
+                                    <strong>JavaScript - Python - Django Rest - Html - Css</strong>
+                                </p></span>
+                                <span class="proj-text">
+                                    <p>                            
+                                        Calculator that shows the value of an amount over time based on inflation 
+                                        and the consumer price index (CPI).
+                                    </p>
+                                </span>
+                            </div> 
+                        </div>
+                    </div>
+                </a>                                 
             </div>            
         </div>
-
         
     </section>
-
-    
-
     <div id="contact" data-aos="fade-up">
         <div class="cont-info">
             <h5>Contact</h5>
@@ -200,7 +181,6 @@
         </div>
         
     </div>
-
     <footer data-aos="fade-up">        
         <ul class="f-ul">
             <li class="f-li"><a href="mailto:garridot210@gmail.com">Email</a></li>

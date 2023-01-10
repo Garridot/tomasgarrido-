@@ -31,7 +31,7 @@ p{
 
 
 header{   
-    animation: nav-in 1s 3s cubic-bezier(0.5, 0, 0.1, 1) both; 
+    animation: nav-in 1s 1s cubic-bezier(0.5, 0, 0.1, 1) both; 
     position: fixed;
     z-index: 2;
     width: 100%;
@@ -148,8 +148,8 @@ nav ul li a:hover{
 }
 @media(max-width:800px){
     header{
-        background: #030303;
-        animation: none !important;
+        background: transparent;
+        /* animation: none !important; */
         font-size: small !important;
         
     }
@@ -169,6 +169,7 @@ nav ul li a:hover{
 main{    
     max-width: 100%;
     overflow: hidden;
+    height: 100vh;
     
 }
 
@@ -179,8 +180,16 @@ main .text{
 .text .t-main{
     display: table-cell;
     vertical-align: middle;
-    animation: outer-left 1s 1s cubic-bezier(0.5, 0, 0.1, 1) both;   
+    animation: outer-left 1s 1s cubic-bezier(0.5, 0, 0.1, 1) both;  
+    animation-iteration-count: 1; 
     
+}
+@keyframes outer-buttom{
+    from{
+        transform: translateY(100%);
+    }to{
+        transform: translateY(0);
+    }
 }
 
 @keyframes outer-left{
@@ -217,11 +226,18 @@ main .text{
     color: #848484;
 }
 
- main .t-img{
-    
-    animation: img-in 1.8s cubic-bezier(0.5, 0, 0.1, 1) 2s backwards ;
-    
+ main .t-img{    
+    animation: img-in 1.8s cubic-bezier(0.5, 0, 0.1, 1) 2s backwards ;    
+    background: url("/static/media/2_3_2.png");
+    background-size: cover;
+    background-position: center center;
+
 }
+main .t-img .img-main{
+    height: 100vh;
+    background: linear-gradient(0deg,#030303 1%,transparent 30%);
+}
+
 
 @keyframes img-in{
     from{
@@ -258,7 +274,7 @@ main .text{
 @media(max-width:800px) {    
     main{
        flex-direction: column-reverse;
-       padding: 15rem 0 0;
+       /* padding: 15rem 0 0; */
        background: #f8f8f8;
        
     }
@@ -267,8 +283,13 @@ main .text{
         text-align: center;
         z-index: 1;        
     }
-    .t-main{
+    main .t-img{
         animation: none !important;
+    } 
+    .t-main{
+        
+        animation: outer-buttom 1s 1s cubic-bezier(0.5, 0, 0.1, 1) both !important;  
+           
     }
     .t-main h1{
         color: white;
@@ -330,7 +351,7 @@ section{
 } 
 .per-text p{
     margin-bottom: 3rem;
-    font-size: 1.4em;
+    font-size: larger;
     line-height: 1.8em;
     letter-spacing: 2px;
     font-family: "proxima-nova", Helvetica, Arial, sans-serif;
@@ -394,6 +415,9 @@ section{
 .skills{
     margin: 20rem 0;
 }
+.skills .frontend{
+    margin-bottom: 10rem !important;
+}
 .skills .frontend,.skills .backend{
     display: flex;
     width: 90%;
@@ -428,7 +452,7 @@ section{
     letter-spacing: 10px;
     font-family: "proxima-nova", Helvetica, Arial, sans-serif;
     font-weight: 600;
-    font-size: xx-large;
+    font-size: x-large;
     color: #777;
     margin: 1rem;
     transition: all 0.3s;
@@ -461,10 +485,11 @@ section{
 
 
 .container-projs{
-    width: 90%;
+    /* width: 90%; */
     height: 100%; 
     margin: auto;
     position: relative;
+    padding: 5rem 0 ;
 }
 
 .proj-title{
@@ -479,6 +504,7 @@ section{
     font-size: xx-large;
     text-align: center;
     color: rgb(141, 141, 141);
+    
 }
 
 @media(max-width:600px){
@@ -488,13 +514,17 @@ section{
 } 
 .proj{
     display: flex;
-    min-width: 100%; 
-    padding: 5rem 0 !important;
+    width: 100%; 
+    /* padding: 5rem 0 !important; */
+    height: 100vh;    
+    filter: saturate(0.5);
 }
 .proj a{
     text-decoration: none;
     transition: all 0.2s;
     color: #777;
+    padding: 0;
+    
 }
 .proj a:hover{    
     color: #777;
@@ -505,12 +535,49 @@ section{
     text-transform: uppercase;
 }
 
-/* .proj:nth-child(2){    
-    text-align: -webkit-right;
+
+#football_proj__{    
+    background-image: url("/static/media/6b801b1be83e1053ca87a39438fd114f2b436eb3.jpg");
+    background-size: cover;
+    background-position: center center;    
 }
-.proj:nth-child(4){    
-    text-align: -webkit-right;
-} */
+
+#inflation_calculator_proj{   
+    background-image: url("https://www.cronista.com/files/image/118/118083/5ff75abcaadcd.webp?oe=jpg");     
+    background-size: cover;
+    background-position: center center; 
+    filter: opacity(0.8);   
+}
+#inflation_calculator_proj .proj-info,#inflation_calculator_proj .proj-info span p{
+    color: white;
+}
+
+#classroom_proj__{
+    background-image: url("https://cdn.dribbble.com/users/4536274/screenshots/10747646/classroom_4x.png");     
+    background-size: cover;
+    background-position: center center;    
+    filter: opacity(0.8);
+}
+
+#classroom_proj__ .proj-info,#classroom_proj__ .proj-info span p{
+    color: white;
+}
+
+
+.featured--vertical{
+    background: linear-gradient(0deg,#030303 10%,transparent 90%);
+    height: inherit;
+    width: inherit;
+    height: 100vh;   
+    display: table;
+}
+.featured--horizontal{
+    /* background: linear-gradient(90deg,#111 30%,transparent 70%);     */
+    /* background: linear-gradient(90deg,#111 0%,transparent 90%); */
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+}
 
 .proj .col-9{
     margin: auto;
@@ -532,20 +599,22 @@ section{
 .proj .proj-img:hover{
     filter: brightness(1);
 }
-.proj .proj-info{
-    margin-top: 2rem; 
-    color: var(--secondary_color);    
+.proj .proj-info{    
+    color: var(--secondary_color);  
+    display: inline-block;
+    vertical-align: top;  
+    width: 90%;
 }
 .proj  h3{
     font-size: 3rem;
     text-transform: uppercase;
     font-weight: 600;
     padding: 2rem 0;
+    text-align: start;
 }
 .proj p{
     text-align: justify;
-    
-    
+    width: 50%;    
 }
 @media(max-width:900px){
     .container-projs{
@@ -560,15 +629,24 @@ section{
         margin-bottom: 5rem !important;
         padding: 0 !important;
     }
+    .proj p{
+        text-align: justify;
+        width: 75%;    
+    }
 }
 
 @media (max-width: 600px){
     .proj .col {        
         padding: 0 1rem !important;
         font-size: small;
+        
     }
     .proj h3{
         font-size: calc(1.3rem + .6vw) !important;
+    }
+    .proj p{
+        text-align: justify;
+        width: 100%;    
     }
 }
 
