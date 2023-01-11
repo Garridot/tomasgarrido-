@@ -518,6 +518,9 @@ section{
     /* padding: 5rem 0 !important; */
     height: 100vh;    
     filter: saturate(0.5);
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
 }
 .proj a{
     text-decoration: none;
@@ -546,7 +549,8 @@ section{
     background-image: url("https://www.cronista.com/files/image/118/118083/5ff75abcaadcd.webp?oe=jpg");     
     background-size: cover;
     background-position: center center; 
-    filter: opacity(0.8);   
+    
+    filter: brightness(0.85);
 }
 #inflation_calculator_proj .proj-info,#inflation_calculator_proj .proj-info span p{
     color: white;
@@ -556,7 +560,8 @@ section{
     background-image: url("https://cdn.dribbble.com/users/4536274/screenshots/10747646/classroom_4x.png");     
     background-size: cover;
     background-position: center center;    
-    filter: opacity(0.8);
+    
+    filter: brightness(0.85);
 }
 
 #classroom_proj__ .proj-info,#classroom_proj__ .proj-info span p{
