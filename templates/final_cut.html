@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Icon Header -->
+    <link rel="icon" href="{{url_for('static', filename='media/icon.png')}}"> 
+
+    <title>Tomas Garrido | Python Developer</title>
+    
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" 
+    rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" 
+    crossorigin="anonymous">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/final_cut.css')}}"> 
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/grain.css')}}"> 
+    
+</head>
+<body> 
+    
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+
+    <div class="loadpage">
+        <span><h1></h1></span>
+    </div> 
+    <header>
+        <div class="header-title">Garrido</div>
+        <div class="bar-menu">
+            <div class="icon-menu">
+                <div class="first-line"></div>
+                <div class="second-line"></div>
+            </div>
+            <div class="icon-menu-cancel">
+                <div class="first-line"></div>
+                <div class="second-line"></div>
+            </div>
+        </div> 
+    </header>   
+
+    <div class="overlay-nav"></div> 
+    <nav>
+        <ul class="header-list">
+            <li><a href="#aboutme--">Aboutme</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="nav-contact">
+            <div class="contact-data">
+                <div class="contact-text">                        
+                    <p>
+                        If you have any question or just say hi, don't hesitate to contact me.
+                    </p>                                     
+                </div> 
+                <div class="links--">
+                    <div class="row">                    
+                        <a  href="https://drive.google.com/file/d/1e2d2zoWefhqhMyFsUEOKPI6T7X_aRR5Y/view"  target="_blank">View Resume</a>
+                    </div>   
+                    <div class="row">                    
+                        <a href="mailto:garrido210@gmail"  target="_blank">Garrido210@gmail</a>
+                    </div>
+                    <div class="row">                    
+                        <a href="https://www.linkedin.com/in/tomas-garrido/"  target="_blank">Linkedin</a>
+                    </div>
+                    <div class="row">                   
+                        <a href="https://github.com/Garridot/"  target="_blank">Github</a>
+                    </div>            
+                </div>
+            </div>
+        </div>
+    </nav> 
+
+    <div class="wrapper--">        
+        
+        <main>  
+            <div class="portfolio-">
+                <div class="portfolio-text">
+                    <h1 class="porText-first">Portfolio</h1>
+                    <h1>Portfolio</h1>
+                    <h1>Portfolio</h1>
+                    <h1>Portfolio</h1>
+                </div>
+                <div class="portfolio-img">
+                    <div class="portimg-table">
+                        <img src="{{ url_for('static', filename='media/perfil.jpg')}}" alt="">
+                    </div>
+                </div>
+                <div class="portfolio-name">
+                    <div class="portname-table">
+                        <p>Tomas</p>
+                    </div>
+                </div>
+            </div> 
+        </main>
+        <div class="transition--1">
+            <div class="data data-1">
+                <span>
+                    <h1>Python</h1>                
+                </span>            
+                <span>
+                    <h1 data-text="Developer">Developer</h1>  
+                </span>            
+            </div>
+            <div class="data data-2">
+                <span>
+                    <h1 data-text="Backend">Backend</h1>
+                </span>
+                <span>
+                    <h1 data-text="Developer">Developer</h1>
+                </span>            
+            </div>
+            <div class="data data-3">
+                <span>
+                    <h1 data-text="Web">Web</h1>
+                </span>
+                <span>
+                    <h1 data-text="Developer">Developer</h1>
+                </span>
+            </div>
+        </div> 
+        <div class="scramble-sticky">
+            <div class="text-scramble-">
+                <div class="scramble-table">           
+                    <div class="scramble-data">
+                        <p>
+                        <span class="s-text-first"></span><br>
+                        <span class="s-text-second"></span>
+                        </p>
+                    </div>
+                </div> 
+            </div>
+        </div> 
+
+        <section id="aboutme--">                         
+            <div class="aboutmedata">   
+                <div class="page-sticky">                   
+                    <div class="first_page">                                                                    
+                        <div class="about_text">
+                            <span class="span-p">
+                                <p>
+                                    Hi, my name is <strong>Tomas Garrido</strong> and I am a <strong>Web Developer</strong>  based in Argentina with skills in, 
+                                    <strong>Python, Django, Django Rest Framework, flask, SQL</strong>, and I also have experience with 
+                                    <strong>HTML, CSS, Bootstrap, and Javascript.</strong> 
+                                </p>
+                            </span>
+                        </div> 
+                    </div>
+                </div>    
+                <div class="page-sticky">         
+                    <div class="second_page">  
+                        <div class="about_text">
+                            <span class="span-p">
+                                <p>
+                                    I started learning about web development<strong> for over 2 years,</strong> mostly through online courses like
+                                    <strong>Udemy, Coursera, freeCodeCamp, and on my own.</strong> As a result,<strong> I could build projects that forged my knowledge.</strong>
+                                </p> 
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="page-sticky">         
+                    <div class="third_page" >
+                        <div class="about_text">
+                            <span class="span-p">
+                                <p>
+                                    I'm excited to can work in a team to can share and improve my knowledge learned, 
+                                    help to build projects and improve as a developer.
+                                </p>
+                            </span>
+                        </div> 
+                    </div>  
+                </div>
+            </div>
+        </section>
+        <div class="skills-sticky">
+            <div class="skills-presentation" id="skills">
+                <div class="skills-title">
+                    <div class="marquee">
+                        <div class="marquee__inner" aria-hidden="true">
+                            <span>Skills 기술 навыки</span>
+                            <span>Skills 기술 навыки</span>
+                            <span>Skills 기술 навыки</span>
+                            <span>Skills 기술 навыки</span>
+                        </div>
+                    </div>                    
+                </div>
+                <div class="skills-circle">
+                    <h4 id="circle">Skills / Skills / Skills / Skills /</h4>
+                </div>
+                <div class="skills-info">
+                    <span>
+                        <li>languages</li>
+                        <li>frameworks</li>
+                        <li>libraries</li>
+                        <li>tools</li>
+                        
+                    </span>
+                </div>
+            </div>
+        </div>
+        <section class="skills--">
+            <div class="skills-boxs">
+                <div class="box">
+                    <h1>Python</h1>
+                    <h1>Python</h1>
+                    <h1>Python</h1>
+                </div>
+                <div class="diverder"></div>
+                <div class="box">
+                    <h1>Django</h1>
+                    <h1>Django</h1>
+                    <h1>Django</h1>
+                </div>
+                <div class="diverder"></div>
+                <div class="box">
+                    <h1>RestFramework</h1>
+                    <h1>RestFramework</h1>
+                    <h1>RestFramework</h1>
+                </div>
+                <div class="diverder"></div>
+                <div class="box">
+                    <h1>Flask</h1>
+                    <h1>Flask</h1>
+                    <h1>Flask</h1>
+                </div>
+                <div class="diverder"></div>
+                <div class="box">
+                    <h1>SQL</h1>
+                    <h1>SQL</h1>
+                    <h1>SQL</h1>
+                </div>
+                <div class="diverder"></div>
+                <div class="box">
+                    <h1>Pandas</h1>
+                    <h1>Pandas</h1>
+                    <h1>Pandas</h1>
+                </div>
+                <div class="diverder"></div>                       
+                <div class="box">
+                    <h1>Html</h1>
+                    <h1>Html</h1>
+                    <h1>Html</h1>
+                </div>
+                <div class="diverder"></div>
+                <div class="box">
+                    <h1>Css</h1>
+                    <h1>Css</h1>
+                    <h1>Css</h1>
+                </div>
+                <div class="diverder"></div>
+                <div class="box">
+                    <h1>Javascript</h1>
+                    <h1>Javascript</h1>
+                    <h1>Javascript</h1>
+                </div>
+                <div class="diverder"></div>
+                <div class="box">
+                    <h1>Bootstrap</h1>
+                    <h1>Bootstrap</h1>
+                    <h1>Bootstrap</h1>
+                </div>                              
+            </div>
+            <div class="another-tools">
+                <div class="tools-block">
+                    <div class="tools-table">
+                        <div class="diverder-tools"></div>                        
+                        <div class="tools-title">
+                            <p>another tools</p>
+                        </div>
+                        <ul class="tools-ul">
+                            <li>Visual Studio Code</li>
+                            <li>Jupiter Notebook</li>
+                            <li>GitHub</li>
+                            <li>Gsap</li>
+                            <li>Photoshop</li>                            
+                        </ul>
+                    </div>                    
+                </div>
+            </div>
+        </section> 
+        <div class="projects-content">
+            <div class="projects-presentation" id="projects">
+                <div class="project-title">
+                    <div class="projects-kanji">
+                        <div class="col"> 
+                            
+                            <div class="row">프</div>
+                            <div class="row">로</div>
+                            <div class="row">젝</div>
+                            <div class="row">트</div>
+                           
+                        </div>                
+                    </div>     
+                    <div class="project-text">
+                        <h1>Projects</h1>
+                        <h1>Projects</h1>
+                        <h1>Projects</h1>
+                        <h1>Projects</h1>
+                        <h1>Projects</h1>
+                        <h1>Projects</h1>
+                        <h1>Projects</h1>                
+                    </div> 
+                    <div class="projects-name">
+                        <ul>
+                            <li>Football Player Charts</li>
+                            <li>Inflation Calculator</li>
+                            <li>Web Acedemy</li>
+                        </ul>
+                    </div>               
+                </div>  
+            </div>
+            <section class="projects--">  
+                <div class="overlay-project">
+                    <div class="block block-1"></div>
+                    <div class="block block-2"></div>
+                    <div class="block block-3"></div>
+                    <div class="block block-4"></div>
+                    <div class="block block-5"></div>
+                    <div class="block block-6"></div>
+                    <div class="block block-7"></div>
+                    <div class="block block-8"></div>
+                    <div class="block block-9"></div>
+                    <div class="block block-10"></div>
+                    <div class="block block-11"></div>
+                    <div class="block block-12"></div>
+                    <div class="block block-13"></div>
+                    <div class="block block-14"></div>
+                    <div class="block block-15"></div>
+                    <div class="block block-16"></div>
+                    <div class="block block-17"></div>
+                    <div class="block block-18"></div>
+                    <div class="block block-19"></div>
+                    <div class="block block-20"></div>
+                </div>     
+    
+                <div class="projects-card"> 
+    
+                    <p class="main-nav next">next</p>               
+                    <div class="project" id="project__1">                             
+                        <div class="project-poster">  
+                            <div class="project-img">                            
+                            </div>
+                            <div class="proj-text">
+                                <div class="text-spans">                                    
+                                    <span><h1>Football Player Charts</h1></span>                                    
+                                    <span id="info">
+                                        <p>                                            
+                                        Football Player Charts is a football statistics website where you will find information, 
+                                        statistics, and charts that show how influenced a player in each team he played.
+                                        <br>
+                                            <a href="https://football-player-charts.onrender.com/" target="_blank">View Project</a>
+                                        </p>                                
+                                    </span>
+                                </div>
+                            </div> 
+                        </div>    
+                    </div>
+                    <div class="project" id="project__2">
+                        <div class="project-img">                            
+                        </div>
+                        <div class="project-poster"> 
+                            <div class="proj-text">
+                                <div class="text-spans">                                    
+                                    <span><h1>Inflation Calculator</h1></span>                                    
+                                    <span id="info">
+                                        <p>                                            
+                                            An app that allows the user to calculate the accumulated inflation over two periods of time, based 
+                                            the consumer price index (CPI).<br> Only Argentina’s inflation data are available.<br>
+                                            <a href="https://inflation-calculator-arg-x4iu.onrender.com/"  target="_blank">View Project</a>
+                                        </p>                                
+                                    </span>
+                                </div>
+                            </div>
+                        </div> 
+                    </div>            
+                </div> 
+            </section> 
+        </div>
+
+
+        <div class="transition2--">
+            
+                <h1 data-text="This not">This not</h1>
+                <h1 data-text="real">real</h1>
+                <h1 data-text="It's just a">It's just a</h1>
+                <h1 data-text="dream.">dream.</h1>
+            
+        </div>
+        
+
+        <section class="contact--" id="contact">
+            <div class="contact-background"> 
+                
+                <div class="marquee">
+                    <div class="marquee__inner" aria-hidden="true">
+                        <span>
+                            <p>contact 連絡 контакт</p>
+                            <p>contact 連絡 контакт</p>
+                            <p>contact 連絡 контакт</p>
+                            <p>contact 連絡 контакт</p>
+                            <p>contact 連絡 контакт</p>
+                            <p>contact 連絡 контакт</p>
+                            <p>contact 連絡 контакт</p>
+                            <p>contact 連絡 контакт</p>
+                        </span>
+                        <span>
+                            <p>contact 連絡 контакт</p>
+                            <p>contact 連絡 контакт</p>
+                            <p>contact 連絡 контакт</p>
+                            <p>contact 連絡 контакт</p>
+                            <p>contact 連絡 контакт</p>
+                            <p>contact 連絡 контакт</p>
+                            <p>contact 連絡 контакт</p>
+                            <p>contact 連絡 контакт</p>
+                        </span>
+                        <span>
+                            <p>contact 連絡 контакт</p>
+                            <p>contact 連絡 контакт</p>
+                            <p>contact 連絡 контакт</p>
+                            <p>contact 連絡 контакт</p>
+                            <p>contact 連絡 контакт</p>
+                            <p>contact 連絡 контакт</p>
+                            <p>contact 連絡 контакт</p>
+                            <p>contact 連絡 контакт</p>
+                        </span>
+                        <span>
+                            <p>contact 連絡 контакт</p>
+                            <p>contact 連絡 контакт</p>
+                            <p>contact 連絡 контакт</p>
+                            <p>contact 連絡 контакт</p>
+                            <p>contact 連絡 контакт</p>
+                            <p>contact 連絡 контакт</p>
+                            <p>contact 連絡 контакт</p>
+                            <p>contact 連絡 контакт</p>
+                        </span>
+                    </div>
+                </div> 
+                
+            </div>
+            <div class="contact-data">
+                <div class="contact-text">
+                    <span>
+                        <p>
+                            If you have any question or just say hi, 
+                            don't hesitate to <span>contact me.</span>
+                        </p>
+                    </span>
+                </div>
+                <div class="contact-links">
+                    <ul class="contactUl">
+                        <li class="contactLi"><a href="https://drive.google.com/file/d/1e2d2zoWefhqhMyFsUEOKPI6T7X_aRR5Y/view" target="_blank">View Resume</a></li>
+                        <li class="contactLi"><a href="mailto:garrido210@gmail"  target="_blank">Garrido210@gmail.com</a></li>
+                        <li class="contactLi"><a href="https://www.linkedin.com/in/tomas-garrido/"  target="_blank">Linkedin</a></li>
+                        <li class="contactLi"><a href="https://github.com/Garridot/"  target="_blank">Github</a></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+    </div>
+</body>
+
+<!-- Gsap -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
+<!-- Anime -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+<!-- textscramble -->
+<script src="{{ url_for('static', filename='js/textscramble.js')}}"></script>
+<!-- Javascript -->
+<script src="{{ url_for('static', filename='js/final_cut.js')}}"></script>
+
+</html>
