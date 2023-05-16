@@ -389,17 +389,36 @@ var overlayblocks = projects.querySelectorAll(".block");
 var nextNav       = projects.querySelector(".main-nav");
 var firstProject  = projects.querySelector("#project__1");
 var secondProject = projects.querySelector("#project__2");
+var thirdProject  = projects.querySelector("#project__3");
 
 
-firstProject.querySelector(".proj-text").classList.toggle("porsterview");    
-firstProject.querySelector(".project-img").classList.toggle("porsterview");  
+firstProject.querySelector(".proj-text").classList.add("porsterview");    
+firstProject.querySelector(".project-img").classList.add("porsterview");  
 
 nextNav.addEventListener("click",()=>{
-    
-    firstProject.querySelector(".proj-text").classList.toggle("porsterview");
-    firstProject.querySelector(".project-img").classList.toggle("porsterview");    
-    secondProject.querySelector(".proj-text").classList.toggle("porsterview");
-    secondProject.querySelector(".project-img").classList.toggle("porsterview")
+
+    if(firstProject.querySelector(".proj-text").classList.contains("porsterview")){     
+
+        firstProject.querySelector(".proj-text").classList.remove("porsterview");
+        firstProject.querySelector(".project-img").classList.remove("porsterview");    
+        secondProject.querySelector(".proj-text").classList.add("porsterview");
+        secondProject.querySelector(".project-img").classList.add("porsterview")
+    }else
+    if(secondProject.querySelector(".proj-text").classList.contains("porsterview")){
+                
+        secondProject.querySelector(".proj-text").classList.remove("porsterview");
+        secondProject.querySelector(".project-img").classList.remove("porsterview");    
+        thirdProject.querySelector(".proj-text").classList.add("porsterview");
+        thirdProject.querySelector(".project-img").classList.add("porsterview")
+    }else
+    if(thirdProject.querySelector(".proj-text").classList.contains("porsterview")){
+
+        thirdProject.querySelector(".proj-text").classList.remove("porsterview");
+        thirdProject.querySelector(".project-img").classList.remove("porsterview");    
+        firstProject.querySelector(".proj-text").classList.add("porsterview");
+        firstProject.querySelector(".project-img").classList.add("porsterview")
+    }    
+  
 })
 
 window.addEventListener("scroll",()=>{   
