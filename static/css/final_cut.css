@@ -1460,13 +1460,13 @@ ul.tools-ul {
 
 
 .project#project__1 .project-img {
-    background: url(/static/media/project__1.jpg);  
+    background: url(/static/media/Project__1.jpg);  
     background-size: cover;
     background-position: 10vw 0%;
 }
 
 .project#project__2 .project-img {  
-    background: url(/static/media/project__2.jpg);
+    background: url(/static/media/Project__2.jpg);
     background-size: cover; 
     background-position: top;
 }
