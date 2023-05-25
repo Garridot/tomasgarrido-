@@ -467,7 +467,7 @@ main{
 
 .portfolio-text h1{    
     font-family: "NeueMontreal-Italic";    
-    font-size: 12vw;    
+    font-size: 10vw;    
     text-transform: uppercase;
     padding: 0;
     margin: 0;
@@ -851,13 +851,14 @@ main{
     position: relative;
     transform: translate3d(var(--move-initial), 0, 0);
     animation: marqueeskills 20s linear infinite;   
-   
+    border-bottom: 1px solid;
 }
 
 .skills-title .marquee span {
     font-size: 40vw;
-    font-size: 50vh;
-    padding: 0 2vw;
+    /* font-size: 50vh; */
+    font-size: 30vh;
+    padding: 2vw;
     text-transform: uppercase;
     white-space: nowrap;
     font-family: "GoshaSans-Bold";
@@ -877,7 +878,8 @@ main{
 
 .skills-circle{
     position: absolute;
-    bottom: -10vh;
+    /* bottom: -10vh; */
+    bottom: 8vh;
     right: 7vw;
     width: 200px;
     height: 200px;
@@ -914,7 +916,8 @@ main{
 
 .skills-info{
     position: absolute;
-    bottom: -8vh;
+    /* bottom: -8vh; */
+    bottom: 8vh;
     
    
 }
