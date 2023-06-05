@@ -835,6 +835,7 @@ main{
     margin: auto;    
     margin-top: 100vh;
     margin-bottom: 100vh;
+    /* margin-bottom: 50vh; */
 }
 
 .skills-title .marquee {
@@ -974,7 +975,8 @@ main{
 .skills-- .box{
     position: relative;
     height: 10vh;
-    margin: 6.6vw 0;
+    /* margin: 6.6vw 0; */
+    margin: 4.6vw 0;
     transform: translateY(50%);
     opacity: 0;
 }
@@ -985,7 +987,8 @@ main{
     letter-spacing: 50px;
     /* color: #cedddd; */
     text-transform: uppercase;    
-    font-size: 5vw;
+    /* font-size: 5vw; */
+    font-size: 3vw;
     
 }
 
@@ -1115,7 +1118,7 @@ main{
 }
 
 .tools-title p{
-    padding-top: 3rem;
+    padding-top: 1rem;
     padding-bottom: 3.2rem;    
     text-transform: uppercase;
     color: #afbbbd;
@@ -1132,7 +1135,7 @@ ul.tools-ul {
 }
 
 .tools-ul li{
-    font-size: small;    
+    font-size: .7rem;    
     color: #adadad;
     font-family: "GoshaSans-Regular";
     letter-spacing: 1px;
@@ -1246,7 +1249,7 @@ ul.tools-ul {
 .projects-name li{
     margin: 0;
     padding: 0;
-    font-size: x-small;
+    font-size: .5rem;
     font-weight: 900;
     color: #adadad;
     font-family: "GoshaSans-Regular";
