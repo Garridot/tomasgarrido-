@@ -380,72 +380,201 @@ window.addEventListener("scroll",()=>{
 
 
 
+var projectsData = [
+    {
+        "id": 1,
+        "title" : "Football Player Charts",
+        "description":
+            `Football Player Charts is a football statistics website where you will find information, 
+            statistics, and charts that show how influenced a player in each team he played.`
+            ,
+        "skills":"Python ● Django ● Django Rest ● Pandas ● Beautiful Soup ● Javascript ● HTML ● CSS",
+        "img":"/static/media/project__1.jpg",
+        "link":"https://football-player-charts.onrender.com/",
+    },    
+    {
+        "id": 2,
+        "title" : "Ruins Of Versailles",
+        "description":
+            `A project inspired by a technical test. The API provides the functionality of e-commerce. 
+            Register and update a product. Register or delete an order, updating the stock of the product. 
+            The value of the order returns the total in pesos and  dollars.`
+            ,
+        "skills":"Python ● Django ● Django Rest ● Javascript ● HTML ● CSS ● Bootstrap",
+        "img":"/static/media/project__2.jpg",
+        "link":"https://ruins-of-versailles-7rbc.onrender.com/",
+    },
+    {
+        "id": 3,
+        "title" : "Inflation Calculator",
+        "description":
+            `An app that allows the user to calculate the accumulated inflation over two periods of time, based 
+            the consumer price index (CPI).<br> Only Argentina’s inflation data are available.<br>`
+            ,
+        "skills":"Python ● Django ● Django Rest ● Javascript ● HTML ● CSS ● Bootstrap",
+        "img":"/static/media/project__3.jpg",
+        "link":"https://inflation-calculator-arg-x4iu.onrender.com/",
+    },
+]
+
+var projetsList = document.querySelector(".projets-list");
 
 
-
-var projects      = document.querySelector(".projects--");
-var overlayblocks = projects.querySelectorAll(".block");
-
-var nextNav       = projects.querySelector(".main-nav");
-var firstProject  = projects.querySelector("#project__1");
-var secondProject = projects.querySelector("#project__2");
-var thirdProject  = projects.querySelector("#project__3");
-
-
-firstProject.querySelector(".proj-text").classList.add("porsterview");    
-firstProject.querySelector(".project-img").classList.add("porsterview");  
-
-nextNav.addEventListener("click",()=>{
-
-    if(firstProject.querySelector(".proj-text").classList.contains("porsterview")){     
-
-        firstProject.querySelector(".proj-text").classList.remove("porsterview");
-        firstProject.querySelector(".project-img").classList.remove("porsterview");    
-        secondProject.querySelector(".proj-text").classList.add("porsterview");
-        secondProject.querySelector(".project-img").classList.add("porsterview")
-    }else
-    if(secondProject.querySelector(".proj-text").classList.contains("porsterview")){
-                
-        secondProject.querySelector(".proj-text").classList.remove("porsterview");
-        secondProject.querySelector(".project-img").classList.remove("porsterview");    
-        thirdProject.querySelector(".proj-text").classList.add("porsterview");
-        thirdProject.querySelector(".project-img").classList.add("porsterview")
-    }else
-    if(thirdProject.querySelector(".proj-text").classList.contains("porsterview")){
-
-        thirdProject.querySelector(".proj-text").classList.remove("porsterview");
-        thirdProject.querySelector(".project-img").classList.remove("porsterview");    
-        firstProject.querySelector(".proj-text").classList.add("porsterview");
-        firstProject.querySelector(".project-img").classList.add("porsterview")
-    }    
-  
-})
-
-window.addEventListener("scroll",()=>{   
-        
-    if(projects.querySelector(".projects-card").getBoundingClientRect().top <= 0){
-
-        TweenMax.to(".block", 0.8, {
-                width: "6%",
-                ease: Power1.easeIn,                                  
-            },
-            0.04
-        );
+for (var i in projectsData) {   
     
-        TweenMax.to(".projects-card", 1, {                            
-            opacity: 1,
-            ease: Expo.easeInOut,
-            delay: .5,
-        });
 
-    }else{        
-        overlayblocks.forEach(i=>{
-            i.style.width="0%"
+    var project = document.createElement("div");
+    project.className = `project --${projectsData[i].id}`;    
+    project.innerHTML =  
+                    `<h1>${projectsData[i].title}</h1>
+                    <div class="picture">
+                        <img src="${projectsData[i].img}" class="img-fluid">
+                    </div>`;
+    projetsList.appendChild(project);
+    
+    var divider = document.createElement("div");
+    divider.className = "divider";
+    projetsList.appendChild(divider);
+}
+
+
+var picture       = document.querySelector(".projets-list .container-img");
+var projects      = document.querySelectorAll(".projets-list .project");
+
+
+projects.forEach(i=>{
+    i.addEventListener("mouseover",()=>{
+        var id = String(i.className).replace(/[a-zA-Z]/g, "").replace("--","");
+
+        var getItem = projectsData.filter(obj => {
+            return obj.id === parseInt(id)
         })
-        document.querySelector(".projects-card").style.opacity = 0;      
-    }
-    
+        var item = getItem[0]
+
+        picture.style.opacity    = 1;        
+        picture.style.background = "url("+ item.img +")"; 
+        picture.style.backgroundSize     = "cover";
+        picture.style.backgroundPosition = "center center"; 
+        picture.style.transitionDuration = ".2s";   
+    })
+
+
+    i.addEventListener("mouseleave",()=>{
+        picture.style.opacity    = 0;         
+        picture.style.transitionDuration = ".2s"; 
+    })
+
+    i.addEventListener("click",()=>{
+        blockAnimation()
+    })
 })
+
+
+
+
+function  blockAnimation(){
+
+    document.querySelector(".overlay-project").style.zIndex = "10";
+    
+    TweenMax.to(".block", 0.8, {
+        width: "6%",        
+        ease: Power1.easeIn,                                  
+    },
+    0.04
+    );
+
+    setTimeout(() => {
+        TweenMax.to(".block", 0.8, {
+            width: "0%",            
+            ease: Power1.easeIn,                                  
+        },
+        0.04
+        ); 
+        setTimeout(() => {
+            document.querySelector(".overlay-project").style.zIndex = "-10";                
+        }, "1000"); 
+        
+    }, "2000");
+}
+
+
+document.onmousemove = (e)=>{
+
+    var x = e.clientX * 200 / window.innerWidth;
+    var y = e.clientY * 400 / window.innerWidth;
+    //event.clientX to get horizontal coordinate of the mouse   
+    
+    picture.style.transform= "translate3d("+ x + "%" + ","+ y + "%" + ",  0px)";
+}
+
+
+
+
+
+
+projects.forEach(i=>{
+    i.addEventListener("click",()=>{
+        var id = String(i.className).replace(/[a-zA-Z]/g, "").replace("--","");
+
+        var getItem = projectsData.filter(obj => {
+            return obj.id === parseInt(id)
+        })
+        renderprojectData(getItem[0])       
+    })
+})
+
+
+const renderprojectData = (item)=>{
+
+    setTimeout(() => {
+        var viewproject = document.createElement("div")
+        viewproject.className = "viewproject";
+    
+        var dataPreject = document.createElement("div");
+        dataPreject.className = "project-data";
+    
+        dataPreject.innerHTML = 
+        `
+        <div class="cancel-icon">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M6.75827 17.2426L12.0009 12M17.2435 6.75736L12.0009 12M12.0009 12L6.75827 6.75736M12.0009 12L17.2435 17.2426" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path>
+            </svg>
+        </div>
+        <div class="proj-title"><h1>${item.title}</h1></div>
+        <div class="proj-img"><img src="${item.img}"></div>
+        <div class="proj-text">
+            <div class="proj-skills">
+                <h2>Skills</h2>
+                <span><p>${item.skills}</p></span>
+            </div>
+            <div class="proj-description">
+                <h2>(Description)</h2>
+                <span><p>${item.description}</p></span>
+                <div class="link"><a href="${item.link}"  target="_blank">View Project</a></div>
+            </div>
+        </div>`
+    
+        viewproject.appendChild(dataPreject);
+        projetsList.appendChild(viewproject);
+    }, "1000");  
+    
+    
+    setTimeout(() => {
+    var cancelProject =  document.querySelector(".cancel-icon svg");
+
+    cancelProject.addEventListener("click",()=>{
+        blockAnimation()
+        setTimeout(() => {
+            document.querySelector(".viewproject").remove()  ;                     
+        }, "1000"); 
+    })
+    }, "1500");  
+     
+}
+
+
+
+
 
 
 
