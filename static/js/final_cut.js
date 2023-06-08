@@ -385,8 +385,12 @@ var projectsData = [
         "id": 1,
         "title" : "Football Player Charts",
         "description":
-            `Football Player Charts is a football statistics website where you will find information, 
-            statistics, and charts that show how influenced a player in each team he played.`
+            `Football Player Charts is a football statistics website where you will find information, statistics, 
+            and charts that show how influenced a player in each team he played.
+            <br> Football Player Charts is an API where you can see how much a player influences his team 
+            (the percentage of the goals scored, his favorite victims, his performance by competition, 
+            and his percentage of goals and assists per game). You can also compare their stats to each other.
+            <br> The data is collected and it's updated through a web scraping on transfermarkt.com.`
             ,
         "skills":"Python ● Django ● Django Rest ● Pandas ● Beautiful Soup ● Javascript ● HTML ● CSS",
         "img":"/static/media/project__1.jpg",
@@ -396,9 +400,17 @@ var projectsData = [
         "id": 2,
         "title" : "Ruins Of Versailles",
         "description":
-            `A project inspired by a technical test. The API provides the functionality of e-commerce. 
-            Register and update a product. Register or delete an order, updating the stock of the product. 
-            The value of the order returns the total in pesos and  dollars.`
+            `A project inspired by a technical test. The API provides the functionality of E-commerce.
+            It provides the next endpoints:            
+            <br> Register/Edit a product      
+            <br> Delete a product            
+            <br> Consult a product           
+            <br> List all products            
+            <br> Update stock of a product            
+            <br> Register/Edit an order (including its details). Updating the stock of the product            
+            <br> Delete an order. Restore product stock            
+            <br> Consult order and details            
+            <br> List all orders`
             ,
         "skills":"Python ● Django ● Django Rest ● Javascript ● HTML ● CSS ● Bootstrap",
         "img":"/static/media/project__2.jpg",
