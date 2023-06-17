@@ -1304,28 +1304,24 @@ ul.tools-ul {
     width: 90%;
     margin: auto;  
     height: 100%;    
-    margin-top: 100vh; 
+    margin-top: 50vh; 
     position: relative;
 
 } 
 
-.projets-list .divider{
-    width: 90%; 
-    height: 1px;
-    background: #c7c7c7;
-         
-}
 
 .project{
     width: 90%;
-    position: relative;
-    height: 10vh;
-    /* margin: 6.6vw 0; */
-    margin: 4.6vw 0;   
-    cursor: pointer;
-    
+    position: relative;      
+    padding: 6.6vw 0;
+    cursor: pointer;     
 }
 
+.project:nth-child(1),
+.project:nth-child(3){
+    border-top: 1px solid #c7c7c7;
+    border-bottom: 1px solid #c7c7c7;   
+}
 
 .cancel-icon {
     position: absolute;
@@ -1342,15 +1338,12 @@ ul.tools-ul {
 }
 
 
-.project h1{    
-    font-family: "GoshaSans-Regular";    
-    letter-spacing: 5px;
+.project h1{       
     color: #cedddd;
-    text-transform: uppercase;    
-    font-size: 3.5vw;  
-    /* color: #adadad; */
-    transition-duration: .8s;  
-    z-index: -1;
+    text-transform: uppercase;  
+    transition-duration: .8s;   
+    font-size: 10vw;
+    font-family: "NeueMontreal-Light";
 }
 
 .project:hover h1{
@@ -1373,36 +1366,25 @@ ul.tools-ul {
     transition-duration: .5s;
 }
 
-.container-img{
-    position: absolute;
-    width: 400px;
-    height: 400px;   
-    filter: saturate(0.5);
-    z-index: 1;
-    cursor: pointer;
-    top: -40%;
-    opacity: 0;   
-    transition-duration: .2s;  
-    will-change: transform;  
-}
 
-
-
-
-
-@media(max-width:1000px){
-    .projets-list {        
-        margin-top: 30vh;        
-    }
-    .project:hover .picture{       
-        opacity: 0;
-    }
-    .project {       
-        margin: 3vw 0;
-        height: 5vh;
+@media(max-width:1000px){    
+    
+    .project{
+        width: 100%;
     }
     .project h1 {        
-        font-size: 3vw;        
+        font-size: 5vw;        
+    }
+
+}
+
+@media(max-width:700px){   
+    .project {       
+        padding: 10.6vw 0;
+    }
+    
+    .project h1 {        
+        font-size: 8vw;        
     }
 
 }

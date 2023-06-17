@@ -438,55 +438,19 @@ for (var i in projectsData) {
     var project = document.createElement("div");
     project.className = `project --${projectsData[i].id}`;    
     project.innerHTML =  
-                    `<h1>${projectsData[i].title}</h1>
-                    <div class="picture">
-                        <img src="${projectsData[i].img}" class="img-fluid">
-                    </div>`;
-    projetsList.appendChild(project);
-    
-    var divider = document.createElement("div");
-    divider.className = "divider";
-    projetsList.appendChild(divider);
+                    `<h1>${projectsData[i].title}</h1>`;
+    projetsList.appendChild(project);   
 }
 
 
-var picture       = document.querySelector(".projets-list .container-img");
+
 var projects      = document.querySelectorAll(".projets-list .project");
-
-
-projects.forEach(i=>{
-    i.addEventListener("mouseover",()=>{
-        var id = String(i.className).replace(/[a-zA-Z]/g, "").replace("--","");
-
-        var getItem = projectsData.filter(obj => {
-            return obj.id === parseInt(id)
-        })
-        var item = getItem[0]
-
-        picture.style.opacity    = 1;        
-        picture.style.background = "url("+ item.img +")"; 
-        picture.style.backgroundSize     = "cover";
-        picture.style.backgroundPosition = "center center"; 
-        picture.style.transitionDuration = ".2s";   
-    })
-
-
-    i.addEventListener("mouseleave",()=>{
-        picture.style.opacity    = 0;         
-        picture.style.transitionDuration = ".2s"; 
-    })
-
-    i.addEventListener("click",()=>{
-        blockAnimation()
-    })
-})
-
-
 
 
 function  blockAnimation(){
 
     document.querySelector(".overlay-project").style.zIndex = "10";
+    
     
     TweenMax.to(".block", 0.8, {
         width: "6%",        
@@ -510,15 +474,6 @@ function  blockAnimation(){
 }
 
 
-document.onmousemove = (e)=>{
-
-    var x = e.clientX * 200 / window.innerWidth;
-    var y = e.clientY * 400 / window.innerWidth;
-    //event.clientX to get horizontal coordinate of the mouse   
-    
-    picture.style.transform= "translate3d("+ x + "%" + ","+ y + "%" + ",  0px)";
-}
-
 
 
 
@@ -531,6 +486,7 @@ projects.forEach(i=>{
         var getItem = projectsData.filter(obj => {
             return obj.id === parseInt(id)
         })
+        blockAnimation();
         renderprojectData(getItem[0])       
     })
 })
