@@ -439,6 +439,33 @@ nav .contact-text {
 }
 
 
+
+
+/**** SECTIONS TITLE ****/
+
+.div-title {
+    width: 90%;
+    margin: auto;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: 100vh;
+    transition: all .2s;   
+}
+
+.div-title h6 {
+    position: absolute;
+    bottom: .2rem;
+    right: 0;
+    font-family: "NeueMontreal-Light";
+    line-height: 1.5;    
+    
+}
+
+
+
+
 /**** MAIN ****/
 
 main{
@@ -467,7 +494,7 @@ main{
 
 .portfolio-text h1{    
     font-family: "NeueMontreal-Italic";    
-    font-size: 10vw;    
+    font-size: 12vw;    
     text-transform: uppercase;
     padding: 0;
     margin: 0;
