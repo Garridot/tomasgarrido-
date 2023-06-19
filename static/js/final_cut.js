@@ -424,7 +424,7 @@ var projectsData = [
             the consumer price index (CPI).<br> Only Argentina’s inflation data are available.<br>`
             ,
         "skills":"Python ● Django ● Django Rest ● Javascript ● HTML ● CSS ● Bootstrap",
-        "img":"/static/media/project_3.jpg",
+        "img":"/static/media/project_3.jpg",        
         "link":"https://inflation-calculator-arg-x4iu.onrender.com/",
     },
 ]
