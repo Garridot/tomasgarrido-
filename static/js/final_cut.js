@@ -393,7 +393,7 @@ var projectsData = [
             <br> The data is collected and it's updated through a web scraping on transfermarkt.com.`
             ,
         "skills":"Python ● Django ● Django Rest ● Pandas ● Beautiful Soup ● Javascript ● HTML ● CSS",
-        "img":"/static/media/project_1.jpg",
+        "img":"/static/media/project__1.jpg",
         "link":"https://football-player-charts.onrender.com/",
     },    
     {
@@ -413,7 +413,7 @@ var projectsData = [
             <br> List all orders`
             ,
         "skills":"Python ● Django ● Django Rest ● Javascript ● HTML ● CSS ● Bootstrap",
-        "img":"/static/media/project_2.jpg",
+        "img":"/static/media/project__2.jpg",
         "link":"https://ruins-of-versailles-7rbc.onrender.com/",
     },
     {
@@ -424,7 +424,7 @@ var projectsData = [
             the consumer price index (CPI).<br> Only Argentina’s inflation data are available.<br>`
             ,
         "skills":"Python ● Django ● Django Rest ● Javascript ● HTML ● CSS ● Bootstrap",
-        "img":"/static/media/project_3.jpg",        
+        "img":"/static/media/project__3.jpg",        
         "link":"https://inflation-calculator-arg-x4iu.onrender.com/",
     },
 ]
