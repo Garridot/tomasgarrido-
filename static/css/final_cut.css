@@ -517,6 +517,7 @@ main{
     display: table;
     width: 100%;
     overflow: hidden;
+    display: none;
 }
 
 .portimg-table {
@@ -878,15 +879,16 @@ main{
     display: flex;
     position: relative;
     transform: translate3d(var(--move-initial), 0, 0);
-    animation: marqueeskills 20s linear infinite;   
+    animation: marqueeskills 10s linear infinite; 
     border-bottom: 1px solid;
+    padding: 0 0 2rem 0;  
+   
 }
 
 .skills-title .marquee span {
     font-size: 40vw;
-    /* font-size: 50vh; */
     font-size: 30vh;
-    padding: 2vw;
+    padding: 0 2vw;
     text-transform: uppercase;
     white-space: nowrap;
     font-family: "GoshaSans-Bold";
@@ -1340,7 +1342,7 @@ ul.tools-ul {
 .project{
     width: 90%;
     position: relative;      
-    padding: 6.6vw 0;
+    padding: 8.6vw 0;
     cursor: pointer;     
 }
 
@@ -1369,7 +1371,7 @@ ul.tools-ul {
     color: #cedddd;
     text-transform: uppercase;  
     transition-duration: .8s;   
-    font-size: 10vw;
+    /* font-size: 10vw; */
     font-family: "NeueMontreal-Light";
 }
 
