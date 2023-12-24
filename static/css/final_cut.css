@@ -465,15 +465,12 @@ nav .contact-text {
 
 
 
-
-/**** MAIN ****/
+/* #### MAIN #### */
 
 main{
     height: 100vh;     
     width: 95%;
-    margin: auto; 
-    
-    
+    margin: auto;     
 }
 
 .portfolio- {
@@ -483,18 +480,16 @@ main{
     position: relative;
 }
 
-.portfolio-text {
+.background-text {
     display: table-cell;
     vertical-align: middle;
     width: 100%;
     text-align: center;
 }
 
-
-
-.portfolio-text h1{    
+.background-text h1{    
     font-family: "NeueMontreal-Italic";    
-    font-size: 12vw;    
+    font-size: 13vw;    
     text-transform: uppercase;
     padding: 0;
     margin: 0;
@@ -505,35 +500,8 @@ main{
     transform: translateY(50%);
     opacity: 0;
 }
-.portfolio-text h1:nth-child(1){    
+.background-text h1:nth-child(1){    
     -webkit-text-fill-color: #cedddd;
-}
-
-.portfolio-img {
-    position: absolute;
-    top: 0;
-    height: 100vh;
-    left: 0;
-    display: table;
-    width: 100%;
-    overflow: hidden;
-    display: none;
-}
-
-.portimg-table {
-    height: 100%;
-    display: table-cell;
-    vertical-align: middle;
-    text-align: center;
-}
-
-
-.portimg-table img{
-    width: 40vw;
-    transform: scale(0.7) rotate(4deg) translateY(100%);  
-    filter: brightness(0.8);    
-    opacity: 0;  
-    overflow: hidden;
 }
 
 .portfolio-name {
@@ -542,18 +510,14 @@ main{
     height: 100vh;
     left: 0;
     display: table;
+    display: flex;
+    align-items: flex-end;
     width: 100%;
     overflow: hidden;    
-}
-
-.portname-table {
-    height: 100%;
-    display: table-cell;
-    vertical-align: bottom;
     text-align: center;
 }
 
-.portname-table p{
+.portfolio-name p{
     color: #97170c;
     font-family: "April June";
     font-size: 3vw;
@@ -565,47 +529,32 @@ main{
     
 }
 
-
-
 @media(max-width:1000px){    
-    .portname-table p{
+    .portfolio-name p{
         letter-spacing: 20px;
     }
 }
-
 @media(max-width:600px){
-    .portfolio-text h1 {
-        font-family: "NeueMontreal-Italic";
+    .background-text h1 {        
         font-size: 12vw;
         letter-spacing: 5px;
-    }
-    .portimg-table img {
-        width: 70vw;
-    }
-    .portname-table p{
-        color: #97170c;
-        font-family: "April June";
-        font-size: 7vw;
-        letter-spacing: 20px;
+    }   
+    .portfolio-name p{        
+        font-size: 7vw;        
     }
 }
-
-@media(max-width:500px){
-    .portfolio-text h1 {
-        font-family: "NeueMontreal-Italic";
+@media(max-width:500px){    
+    .background-text h1 {        
         font-size: 15vw;
         letter-spacing: 1px;
-    }
-    .portimg-table img {
-        width: 90vw;
-    }
-    .portname-table p{
-        color: #97170c;
-        font-family: "April June";
+    }    
+    .portfolio-name p{
         font-size: 5vw;
         letter-spacing: 10px;
     }
 }
+
+
 
 /**** TRANSITION-1 ****/
 
@@ -629,7 +578,7 @@ main{
     font-size: 15vw;    
     text-transform: uppercase;
     white-space: nowrap;
-    font-family: "NeueMontreal-Light";
+    font-family: "NeueMontreal-Light";   
     display: flex;
     margin: 0;
     transition-duration: 1s;  
@@ -1808,6 +1757,39 @@ section.projects-- {
     animation: marqueeSkill 20s linear infinite;     
     transition: all .2s;    
 }
+
+
+
+
+
+
+
+.__chapter__4 .banner__{
+    position: relative;
+    height: 120vh;
+    margin: 2rem 0 0;   
+    display: none; 
+}
+.__chapter__4 .banner__ .img__{
+    background: url("media/ghost_in_the_Shell_1995_009-1200x649.jpg");
+    background-position: center;
+    background-size: cover;
+    height: 80vh;
+    width: 80%;
+    position: absolute;
+    top: 0; 
+    transition: all 1.5s ease-out;
+    clip-path: polygon(0% 0, 48% 0, 48% 0%, 0% 0%); 
+}
+
+.__chapter__4 .banner__ .img__:nth-of-type(2){
+    transform: translateY(10%);    
+    clip-path: polygon(50% 100%, 100% 100%, 100% 100%, 50% 100%);
+}
+
+
+
+
 
 
 .contact-background span p{

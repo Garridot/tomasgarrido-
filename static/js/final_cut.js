@@ -113,7 +113,6 @@ navList.forEach(i=>{
 var main    = document.querySelector("main");
 var mainH1  = document.querySelectorAll("main h1");
 var mainP   = document.querySelector("main p");
-var mainImg = document.querySelector("main img");
 
 const mainAppear = ()=>{
     setTimeout(()=>{
@@ -122,11 +121,7 @@ const mainAppear = ()=>{
             mainH1[i].style.opacity            = 1;
             mainH1[i].style.transitionDelay    = (i / 2) + "s";
             mainH1[i].style.transitionDuration = "2s"
-        } 
-        mainImg.style.transform = "scale(0.7) rotate(4deg) translateY(0%)";
-        mainImg.style.opacity   = 1;
-        mainImg.style.transitionDuration = "2s";
-        mainImg.style.transitionDelay    =  "1.6s";
+        }         
 
         mainP.style.transform = "rotate(350deg) translateY(0%)";
         mainP.style.opacity   = 1;
