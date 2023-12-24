@@ -556,12 +556,12 @@ main{
 
 
 
-/**** TRANSITION-1 ****/
+/* #### TRANSITION-1 #### */
 
 .transition--1 {    
     width: 90%;
     margin: auto;
-    margin-top: 100vh;
+    margin-top: 20vh;
     overflow: hidden;
 }
 
@@ -577,29 +577,29 @@ main{
 .transition--1 h1{
     font-size: 15vw;    
     text-transform: uppercase;
-    white-space: nowrap;
-    font-family: "NeueMontreal-Light";   
+    white-space: nowrap;    
+    font-family: "NeueMontreal-Italic";   
     display: flex;
     margin: 0;
     transition-duration: 1s;  
-    color: #cedddd;
+    color: #cedddd;     
 }
 
 .data:nth-child(1) span:nth-child(1) h1{
-    color:  rgb(151, 23, 12);   
-      
+    color:  rgb(151, 23, 12);         
 }
 
 .data span:nth-child(2) h1{
     justify-content: end;
 }
 
-.transition--1 h1::after,.transition--1 h1::before{
+.transition--1 h1::after,
+.transition--1 h1::before{
     content: attr(data-text);
     font-size: 15vw;    
     text-transform: uppercase;
-    white-space: nowrap;
-    font-family: "NeueMontreal-Light";
+    white-space: nowrap;   
+    font-family: "NeueMontreal-Italic"; 
     display: flex;
     margin: 0;
     transition-duration: 1s; 
@@ -608,11 +608,11 @@ main{
 }
 .transition--1 h1.scroll::after{
     color:  #e91417;   
-    transform: translateX(-3px);   
+    transform: translateX(-3px); 
 }
 .transition--1 h1.scroll::before{
     color: #30dde7;   
-    transform: translateX(3px);   
+    transform: translateX(3px);  
 }
 
 
