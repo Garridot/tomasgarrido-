@@ -837,6 +837,7 @@ main{
 .skills-title .marquee span {
     font-size: 40vw;
     font-size: 30vh;
+    /* font-size: 35vw; */
     padding: 0 2vw;
     text-transform: uppercase;
     white-space: nowrap;
@@ -965,8 +966,8 @@ main{
     letter-spacing: 50px;
     /* color: #cedddd; */
     text-transform: uppercase;    
-    /* font-size: 5vw; */
-    font-size: 3vw;
+    font-size: 5vw;
+   
     
 }
 
@@ -1146,8 +1147,6 @@ ul.tools-ul {
 
 /**** PROJECTS ****/
 
-
-
 .projects-presentation{
     height: 200vh;
       
@@ -1208,32 +1207,6 @@ ul.tools-ul {
     line-height: 3;
 }
 
-.projects-name{
-    position: absolute;
-    bottom: 0%;
-    right: 0;
-    text-align: end;
-    padding: 2vw;
-    opacity: 0;
-    transition-delay: 3s;
-    transition-duration: 1s;
-}
-.projects-name ul{
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-.projects-name li{
-    margin: 0;
-    padding: 0;
-    font-size: .5rem;
-    font-weight: 900;
-    color: #adadad;
-    font-family: "GoshaSans-Regular";
-    letter-spacing: 5px;
-    line-height: 2;
-    text-transform: uppercase;
-}
 
 
 @media(max-width:900px){
@@ -1261,13 +1234,7 @@ ul.tools-ul {
     .project-title .project-text h1{  
        line-height: 1;
        font-size: 8vw;        
-    }
-    .projects-name{
-        margin-bottom: 5vw;
-    }
-    .projects-name li{
-        font-size: 1.5vw;
-    }
+    }    
 }
 
 @media(max-width:400px){
@@ -1278,352 +1245,140 @@ ul.tools-ul {
 }
 
 
-.projets-list{
-    width: 90%;
-    margin: auto;  
-    height: 100%;    
-    margin-top: 50vh; 
-    position: relative;
-
-} 
-
+.projects--{
+    height: 400vh;
+}
 
 .project{
-    width: 90%;
-    position: relative;      
-    padding: 8.6vw 0;
-    cursor: pointer;     
+    width: 95%;
+    margin: auto;
+    height: 100vh;
+    position: sticky;
+    top: 0;
+    display: flex;
+    align-items:flex-end;
 }
 
-.project:nth-child(1),
-.project:nth-child(3){
-    border-top: 1px solid #c7c7c7;
-    border-bottom: 1px solid #c7c7c7;   
-}
-
-.cancel-icon {
-    position: absolute;
-    top: 10rem;
-    right: 4rem;
-}
-
-.cancel-icon svg {
-    cursor: pointer;
-    width: 2.5rem;
-    fill: #cedddd;
-    stroke-width: 1.4px;
-    display: block;    
-}
-
-
-.project h1{       
-    color: #cedddd;
-    text-transform: uppercase;  
-    transition-duration: .8s;   
-    /* font-size: 10vw; */
-    font-family: "NeueMontreal-Light";
-}
-
-.project:hover h1{
-    color: #414141;
-    transform: translateX(40px);
-    transition-duration: .8s;
-    color: #212121;
-}
-
-.project .picture{
-    position: absolute;
-    top: -100%;
-    opacity: 0;
-    transition-duration: .2s;
+.project:nth-of-type(1){
     z-index: 2;
 }
 
-.project img {
-    width: 40%;        
-    transition-duration: .5s;
+.project .data--{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
 }
 
-
-@media(max-width:1000px){    
-    
-    .project{
-        width: 100%;
-    }
-    .project h1 {        
-        font-size: 5vw;        
-    }
-
-}
-
-@media(max-width:700px){   
-    .project {       
-        padding: 10.6vw 0;
-    }
-    
-    .project h1 {        
-        font-size: 8vw;        
-    }
-
-}
-
-
-
-
-.projects-content {
-    position: relative;
-}
-
-.overlay-project {
-    width: 100%;
-    height: 100vh;
-    position: fixed;
-    overflow: hidden;
-    z-index: -10;
-}
-
-.overlay-project .block {
-    width: 0%;
+.project .tags-- {
+    width: 40%;
     height: 100%;
-    background: #09090c;
-    position: absolute;
-    z-index: 10;
-    top: 0;
+    display: flex;   
+    align-items: center;
 }
 
-.block-1 {
-    left: 0;
-}
-
-.block-2 {
-    left: 5%;
-}
-
-.block-3 {
-    left: 10%;
-}
-
-.block-4 {
-    left: 15%;
-}
-
-.block-5 {
-    left: 20%;
-}
-
-.block-6 {
-    left: 25%;
-}
-
-.block-7 {
-    left: 30%;
-}
-
-.block-8 {
-    left: 35%;
-}
-
-.block-9 {
-    left: 40%;
-}
-
-.block-10 {
-    left: 45%;
-}
-
-.block-11 {
-    left: 50%;
-}
-
-.block-12 {
-    left: 55%;
-}
-
-.block-13 {
-    left: 60%;
-}
-
-.block-14 {
-    left: 65%;
-}
-
-.block-15 {
-    left: 70%;
-}
-
-.block-16 {
-    left: 75%;
-}
-
-.block-17 {
-    left: 80%;
-}
-
-.block-18 {
-    left: 85%;
-}
-
-.block-19 {
-    left: 90%;
-}
-
-.block-20 {
-    left: 95%;
-}
-
-
-section.projects-- {
-    max-width: 100%;
-    position: relative;
-    overflow: hidden;
-}
-
-
-.viewproject {    
-    position: fixed;
-    height: 100vh;
-    overflow-y: scroll;
-    background: #09090c;
-    width: 100%;
-    top: 0;
-    z-index: 9;
-    right: 0;
-    overflow-x: hidden;
-}
-
-.project-data {
-    position: absolute;
-    width: 100%;
-    height: 100%;    
-}
-
-.proj-title {
-    width: 90%;
-    margin: auto;
-    margin-top: 20rem;
-}
-
-.proj-title h1{
-    font-size: 6rem;
+.project .tech-skills span{
+    font-size: small;
+    color: #adadad;
+    font-family: "GoshaSans-Regular";
     text-transform: uppercase;
-    font-family: 'GoshaSans-Bold';    
 }
 
-.proj-img {
-    width: 90%;
-    margin: auto;
-    height: 500px;
-    overflow: hidden;
+.project .project-img{    
+    width: 55%;
+    height: 45vh;
 }
 
-.proj-img img{
-    max-width: 100%;
-    height: auto;
-}
-
-.proj-text {
-    width: 90%;
-    margin: auto;
+.project .proj--text {   
     display: flex;
     justify-content: space-between;
-    margin-top: 5rem;
+    align-items: center;
 }
 
-.proj-text h2{
-    font-size: 1.2rem;
+.project .title-- {
+    width: 40%;
+}
+
+.project .title-- h5{
+    font-family: "NeueMontreal-Italic";
+    font-size: 4vw;
     text-transform: uppercase;
-    font-family: 'GoshaSans-Bold';
+    line-height: .8;
+    padding: 0;
+    margin: 0;
+    -webkit-text-fill-color: #cedddd;
 }
 
-.proj-text p{
-    font-family: "NeueMontreal-Light";
-    letter-spacing: 1px;
-    font-weight: 600;
-}
-
-.proj-description {
-    width: 50%;
-}
-
-.proj-description .link {
+.project .links {
     margin: 2rem 0;
+    display: flex;
+    justify-content: space-between;
+    width: 90%;    
 }
 
-.proj-description a{    
-    color: white;
+.project .links a{
     text-decoration: none;
     border: 1px solid;
     padding: 0.5rem;
     border-radius: 20px;
-}
-
-.proj-skills{
     width: 40%;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: small;
+    color: #adadad;
+    font-family: "GoshaSans-Regular";
+    transition: all .5s;
 }
 
-
-
-
-@media(max-width:1200px){
-    
-    .proj-title h1 {
-        font-size: 4rem;        
-    }
+.project .links a:hover{
+    background: #adadad;
+    color: #09090c;
+    transition: all .5s;
 }
 
+.project .description-- {
+    width: 55%;
+}
+.project .description-- p{
+    font-size: small;
+    color: #adadad;
+    font-family: "GoshaSans-Regular";
+    text-transform: uppercase;
+}
 
 @media(max-width:1000px){
-    .proj-title h1 {
-        font-size: 4rem;        
+    
+    .project .data-- {
+        display: block;
     }
-    .cancel-icon {        
-        right: 3rem;
+    .project .project-img {
+        width: 100%;        
     }
-    .cancel-icon svg {       
-        width: 2rem;        
+    .project .tags-- {
+        width: 100%;
+    }
+    .project .proj--text {       
+        margin: 5rem 0 0;
+    }
+    .project .title-- h5 {        
+        font-size: 5vw;
+        text-align: center;
     }
 }
 
-@media(max-width:900px){
-    .proj-text {       
-        display: block;       
+@media(max-width:800px){
+    .project .proj--text {
+        margin: 2rem 0 0;
+        display: block;
     }
-    .proj-skills {
-        width: 100%;       
+    .project .title-- {
+        width: 100%;
     }
-    .proj-description {
+    .project .description-- {
         width: 100%;
     }
 }
 
-
-@media(max-width:800px){    
-    .proj-img {        
-        height: auto;        
-    }
-}
-
-@media(max-width:700px){
-    .cancel-icon {        
-        right: 2rem;
-    }
-    .proj-title h1 {
-        font-size: 2rem;
-    }
-}
-
-@media(max-width:600px){
-
-    .cancel-icon {        
-        right: 1rem;
-    }
-    .proj-skills {      
-        margin: 0 0 5rem;
-    }
-    .proj-text h2 {
-        font-size: 1rem;        
-    }
-}
 
 
 

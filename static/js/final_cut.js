@@ -347,7 +347,7 @@ window.addEventListener("scroll",()=>{
 var projectTitle  = document.querySelector(".projects-presentation");
 var projectsh1    = document.querySelectorAll(".projects-presentation h1");
 var projectsKanji = document.querySelector(".projects-kanji");
-var projectsName  = document.querySelector(".projects-name");
+
 
 
 window.addEventListener("scroll",()=>{
@@ -360,184 +360,114 @@ window.addEventListener("scroll",()=>{
         }
 
         projectsKanji.style.opacity = 1;
-        projectsName.style.opacity = 1;
+        
     }else{
         for(let i = 0;i < projectsh1.length;i++){
             projectsh1[i].style.transform = "translateX(-20%)";
             projectsh1[i].style.transitionDelay = (i/5)+"s";
             projectsh1[i].style.opacity = 0;
         }
-
-        projectsKanji.style.opacity = 0;
-        projectsName.style.opacity = 0;
+        projectsKanji.style.opacity = 0;     
     }
 })
 
 
+var projectsList = document.querySelector(".projects--");
 
-var projectsData = [
+const upateProject = (project) => {
+    var title   = projects[0].querySelector(".title-- h5");
+    var skills  = projects[0].querySelector(".tech-skills span");
+    var img     = projects[0].querySelector(".project-img");
+    var URLCODE = projects[0].querySelector(".links a:nth-of-type(1)");
+    var URLSITE = projects[0].querySelector(".links a:nth-of-type(2)");
+    var description = projects[0].querySelector(".description-- p");
+
+    title.innerHTML  = project.name;
+    skills.innerHTML = project.skills;
+
+    img.style.background         = `url(${project.image})`;
+    img.style.backgroundSize     = "cover";
+    img.style.backgroundPosition = "center";
+
+    URLCODE.href = project.URL_CODE;
+    URLSITE.href = project.URL_SITE;
+
+    description.innerHTML = project.description
+
+}
+
+const projectsData = [
     {
-        "id": 1,
-        "title" : "Football Player Charts",
-        "description":
-            `Football Player Charts is a football statistics website where you will find information, statistics, 
-            and charts that show how influenced a player in each team he played.
-            <br> Football Player Charts is an API where you can see how much a player influences his team 
-            (the percentage of the goals scored, his favorite victims, his performance by competition, 
-            and his percentage of goals and assists per game). You can also compare their stats to each other.
-            <br> The data is collected and it's updated through a web scraping on transfermarkt.com.`
-            ,
-        "skills":"Python ● Django ● Django Rest ● Pandas ● Beautiful Soup ● Javascript ● HTML ● CSS",
-        "img":"/static/media/project__1.jpg",
-        "link":"https://football-player-charts.onrender.com/",
-    },    
-    {
-        "id": 2,
-        "title" : "Ruins Of Versailles",
-        "description":
-            `A project inspired by a technical test. The API provides the functionality of E-commerce.
-            It provides the next endpoints:            
-            <br> Register/Edit a product      
-            <br> Delete a product            
-            <br> Consult a product           
-            <br> List all products            
-            <br> Update stock of a product            
-            <br> Register/Edit an order (including its details). Updating the stock of the product            
-            <br> Delete an order. Restore product stock            
-            <br> Consult order and details            
-            <br> List all orders`
-            ,
-        "skills":"Python ● Django ● Django Rest ● Javascript ● HTML ● CSS ● Bootstrap",
-        "img":"/static/media/project__2.jpg",
-        "link":"https://ruins-of-versailles-7rbc.onrender.com/",
+        "name"        : "Football Players Charts",
+        "skills"      : "Python ● Django RestFramework ● Flask ● Pandas ● JWT  ● YAML ● HTML ● CSS ● Javascript ● Chart.js",
+        "URL_CODE"    : "https://github.com/Garridot/football-players-stats-api",
+        "URL_SITE"    : "https://football-players-charts.onrender.com/",
+        "image"       : "/static/media/banner.png",
+        "description" : "Developed using Django Rest Framework, this app manages and analyzes football players' performance statistics by web scraping from Transfermarkt.",
     },
     {
-        "id": 3,
-        "title" : "Inflation Calculator",
-        "description":
-            `An app that allows the user to calculate the accumulated inflation over two periods of time, based 
-            the consumer price index (CPI).<br> Only Argentina’s inflation data are available.<br>`
-            ,
-        "skills":"Python ● Django ● Django Rest ● Javascript ● HTML ● CSS ● Bootstrap",
-        "img":"/static/media/project__3.jpg",        
-        "link":"https://inflation-calculator-arg-x4iu.onrender.com/",
+        "name"        : "E-commerce Project",
+        "skills"      : "Python ● Django RestFramework ● HTML ● CSS ● bootstrap  ● Javascript",
+        "URL_CODE"    : "https://github.com/Garridot/Ruins-of-Versailles_Ecommerce-Project",
+        "URL_SITE"    : "https://ruins-of-versailles-7rbc.onrender.com/",
+        "image"       : "https://raw.githubusercontent.com/Garridot/Ruins-of-Versailles_Ecommerce-Project/main/project_images/image__1.png",
+        "description" : 
+        `The API streamlines E-commerce for a painting-centric art gallery, featuring key endpoints for creating, editing, and deleting products. Users can view product details, list products, and update stock. It also supports order functions, allowing creation, modification, and deletion, with options for restoring product stock, viewing order details, and listing all orders, enhancing business efficiency.`,
     },
+    {
+        "name"        : "Inflation Calculator",
+        "skills"      : "Python ● Django RestFramework ● HTML ● CSS ● bootstrap  ● Javascript",
+        "URL_CODE"    : "https://github.com/Garridot/inflation_calculator",
+        "URL_SITE"    : "https://inflation-calculator-arg-x4iu.onrender.com/",
+        "image"       : "/static/media/project__3.jpg",
+        "description" : "app that allows the user to calculate the accumulated inflation over two periods of time, based the consumer price index (CPI). Only Argentina’s inflation data are available.",
+    }
 ]
 
-var projetsList = document.querySelector(".projets-list");
 
-
-for (var i in projectsData) {   
-    
-
+for (var i = 0; i < projectsData.length; i++) {
     var project = document.createElement("div");
-    project.className = `project --${projectsData[i].id}`;    
-    project.innerHTML =  
-                    `<h1>${projectsData[i].title}</h1>`;
-    projetsList.appendChild(project);   
+    project.className = "project"; 
+    projectsList.appendChild(project);   
 }
 
+var projects = document.querySelectorAll(".project");
 
-
-var projects      = document.querySelectorAll(".projets-list .project");
-
-
-function  blockAnimation(){
-
-    document.querySelector(".overlay-project").style.zIndex = "10";
-    
-    
-    TweenMax.to(".block", 0.8, {
-        width: "6%",        
-        ease: Power1.easeIn,                                  
-    },
-    0.04
-    );
-
-    setTimeout(() => {
-        TweenMax.to(".block", 0.8, {
-            width: "0%",            
-            ease: Power1.easeIn,                                  
-        },
-        0.04
-        ); 
-        setTimeout(() => {
-            document.querySelector(".overlay-project").style.zIndex = "-10";                
-        }, "1000"); 
-        
-    }, "2000");
-}
-
-
-
-
-
-
-
-projects.forEach(i=>{
-    i.addEventListener("click",()=>{
-        var id = String(i.className).replace(/[a-zA-Z]/g, "").replace("--","");
-
-        var getItem = projectsData.filter(obj => {
-            return obj.id === parseInt(id)
-        })
-        blockAnimation();
-        renderprojectData(getItem[0])       
-    })
-})
-
-
-const renderprojectData = (item)=>{
-
-    setTimeout(() => {
-        var viewproject = document.createElement("div")
-        viewproject.className = "viewproject";
-    
-        var dataPreject = document.createElement("div");
-        dataPreject.className = "project-data";
-    
-        dataPreject.innerHTML = 
-        `
-        <div class="cancel-icon">
-            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                <path d="M6.75827 17.2426L12.0009 12M17.2435 6.75736L12.0009 12M12.0009 12L6.75827 6.75736M12.0009 12L17.2435 17.2426" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path>
-            </svg>
+projects[0].innerHTML = 
+`
+<div class="data--">
+    <div class="tags--">
+        <div class="tech-skills">
+            <span>${projectsData[0].skills}</span>
+        </div>                        
+    </div>
+    <div class="project-img"></div>
+    <div class="proj--text">
+        <div class="title--">
+            <h5>${projectsData[0].name}</h5>
+            <div class="links">
+                <a href="${projectsData[0].URL_SITE} target="_blank"">view project</a>
+                <a href="${projectsData[0].URL_CODE} target="_blank"">view code</a>
+            </div>
         </div>
-        <div class="proj-title"><h1>${item.title}</h1></div>
-        <div class="proj-img"><img src="${item.img}"></div>
-        <div class="proj-text">
-            <div class="proj-skills">
-                <h2>Skills</h2>
-                <span><p>${item.skills}</p></span>
-            </div>
-            <div class="proj-description">
-                <h2>(Description)</h2>
-                <span><p>${item.description}</p></span>
-                <div class="link"><a href="${item.link}"  target="_blank">View Project</a></div>
-            </div>
-        </div>`
-    
-        viewproject.appendChild(dataPreject);
-        projetsList.appendChild(viewproject);
-    }, "1000");  
-    
-    
-    setTimeout(() => {
-    var cancelProject =  document.querySelector(".cancel-icon svg");
+        <div class="description--">
+            <p>${projectsData[0].description}</p>
+        </div>
+    </div>
+</div>  
+`
 
-    cancelProject.addEventListener("click",()=>{
-        blockAnimation()
-        setTimeout(() => {
-            document.querySelector(".viewproject").remove()  ;                     
-        }, "1000"); 
-    })
-    }, "1500");  
-     
-}
+// Function to update project content
+const updateProjectContent = () => {
+    projects.forEach((project, index) => {
+        if (project.getBoundingClientRect().top == 0) {
+            upateProject(projectsData[index]);
+        }
+    });
+};
 
-
-
-
+// Event listener for scroll
+window.addEventListener('scroll', updateProjectContent);
 
 
 
