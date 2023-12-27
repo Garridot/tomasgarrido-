@@ -471,22 +471,6 @@ window.addEventListener('scroll', updateProjectContent);
 
 
 
-// TRANSITION 2 //
-
-var dataText2   = document.querySelectorAll(".transition2-- h1");
-
-
-
-window.addEventListener('scroll', ()=> {
-    dataText2.forEach(i=>{
-        i.classList.add("scroll");
-
-        setTimeout(()=>{
-            i.classList.remove("scroll");
-        },1000)
-    })  
-
-})
 
 
 // CONTACT //
