@@ -378,8 +378,8 @@ const upateProject = (project) => {
     var title   = projects[0].querySelector(".title-- h5");
     var skills  = projects[0].querySelector(".tech-skills span");
     var img     = projects[0].querySelector(".project-img");
-    var URLCODE = projects[0].querySelector(".links a:nth-of-type(1)");
-    var URLSITE = projects[0].querySelector(".links a:nth-of-type(2)");
+    var URLSITE = projects[0].querySelector(".links a:nth-of-type(1)");
+    var URLCODE = projects[0].querySelector(".links a:nth-of-type(2)");
     var description = projects[0].querySelector(".description-- p");
 
     title.innerHTML  = project.name;
@@ -446,8 +446,8 @@ projects[0].innerHTML =
         <div class="title--">
             <h5>${projectsData[0].name}</h5>
             <div class="links">
-                <a href="${projectsData[0].URL_SITE} target="_blank"">view project</a>
-                <a href="${projectsData[0].URL_CODE} target="_blank"">view code</a>
+                <a href="${projectsData[0].URL_SITE}" target="_blank">view project</a>
+                <a href="${projectsData[0].URL_CODE}" target="_blank">view code</a>
             </div>
         </div>
         <div class="description--">
