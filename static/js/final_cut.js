@@ -221,38 +221,12 @@ observerScramble.observe(document.querySelector(".text-scramble-"));
 // ABOUT ME //
 
 var first_page   = document.querySelector(".first_page");
-var second_page  = document.querySelector(".second_page");
-var third_page   = document.querySelector(".third_page");
 
-
-window.addEventListener("scroll",()=>{    
-  
-    if(first_page.getBoundingClientRect().top == 0){         
-        first_page.querySelector("p").classList.add("show"); 
-
-    }else{         
-        first_page.querySelector("p").classList.remove("show");      
-    }
-
-    if(second_page.getBoundingClientRect().top == 0){    
-
-        first_page.querySelector("p").classList.remove("show");
-        second_page.querySelector("p").classList.add("show");
-
-    }else{ 
-        second_page.querySelector("p").classList.remove("show");    
-    }
-
-    if(third_page.getBoundingClientRect().top <= 0){ 
-        second_page.querySelector("p").classList.remove("show");   
-        third_page.querySelector("p").classList.add("show");  
-
-    }else if(third_page.getBoundingClientRect().top > 0){
-        third_page.querySelector("p").classList.remove("show");
+window.addEventListener("scroll",()=>{
+    if(first_page.getBoundingClientRect().top < 500){
+        first_page.querySelector("p").classList.add("show");
     }
 })
-
-
 
 // SKILLS //
 

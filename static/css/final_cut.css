@@ -705,20 +705,16 @@ main{
 /**** ABOUTME  ****/
 
 .aboutmedata{   
-    width: 80%;
+    width: 90%;
     margin: auto;
     height: 100%;
 }
 
 .page-sticky{
-    height: 120vh;
+    height: 100vh;
     position: sticky;
     top: 0;
 }
-.aboutmedata .page-sticky:nth-child(3){
-    height: 200vh;
-}
-
 .first_page,.second_page,.third_page{
     position: sticky;
     top: 0; 
@@ -809,10 +805,9 @@ main{
     height: 100vh;
     position: relative;  
     width: 90%;
-    margin: auto;    
-    margin-top: 100vh;
-    margin-bottom: 100vh;
-    /* margin-bottom: 50vh; */
+    margin: auto;
+    margin-top: 10vh;
+    margin-bottom: 50vh;   
 }
 
 .skills-title .marquee {
