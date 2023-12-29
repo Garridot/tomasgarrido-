@@ -373,28 +373,30 @@ const upateProject = (project) => {
 const projectsData = [
     {
         "name"        : "Football Players Charts",
-        "skills"      : "Python ● Django RestFramework ● Flask ● Pandas ● JWT  ● YAML ● HTML ● CSS ● Javascript ● Chart.js",
+        "skills"      : "Skills: Python ● Django RestFramework ● Flask ● Pandas ● JWT  ● YAML ● HTML ● CSS ● Javascript ● Chart.js",
         "URL_CODE"    : "https://github.com/Garridot/football-players-stats-api",
         "URL_SITE"    : "https://football-players-charts.onrender.com/",
         "image"       : "/static/media/banner.png",
-        "description" : "Developed using Django Rest Framework, this app manages and analyzes football players' performance statistics by web scraping from Transfermarkt.",
+        "description" : `This is a Django Rest Framework API that scrapes stats from Transfermarkt to manage and analyze football players' performance.<br>
+        It comes with a complementary Flask web app called "Football Player Charts" that enables users to explore and analyze statistics interactively using charts.`,
     },
     {
         "name"        : "E-commerce Project",
-        "skills"      : "Python ● Django RestFramework ● HTML ● CSS ● bootstrap  ● Javascript",
+        "skills"      : "Skills: Python ● Django RestFramework ● HTML ● CSS ● bootstrap ● Javascript ● PayPal API",
         "URL_CODE"    : "https://github.com/Garridot/Ruins-of-Versailles_Ecommerce-Project",
         "URL_SITE"    : "https://ruins-of-versailles-7rbc.onrender.com/",
         "image"       : "https://raw.githubusercontent.com/Garridot/Ruins-of-Versailles_Ecommerce-Project/main/project_images/image__1.png",
         "description" : 
-        `The API streamlines E-commerce for a painting-centric art gallery, featuring key endpoints for creating, editing, and deleting products. Users can view product details, list products, and update stock. It also supports order functions, allowing creation, modification, and deletion, with options for restoring product stock, viewing order details, and listing all orders, enhancing business efficiency.`,
+        `Development of a REST API using Django Rest Framework, which provides the necessary functionality for an e-commerce website.<br> 
+        The order value is displayed in Argentine pesos and US dollars with PayPal as the payment method.`,
     },
     {
         "name"        : "Inflation Calculator",
-        "skills"      : "Python ● Django RestFramework ● HTML ● CSS ● bootstrap  ● Javascript",
+        "skills"      : "Skills: Python ● Django RestFramework ● HTML ● CSS ● bootstrap  ● Javascript",
         "URL_CODE"    : "https://github.com/Garridot/inflation_calculator",
         "URL_SITE"    : "https://inflation-calculator-arg-x4iu.onrender.com/",
         "image"       : "/static/media/project__3.jpg",
-        "description" : "app that allows the user to calculate the accumulated inflation over two periods of time, based the consumer price index (CPI). Only Argentina’s inflation data are available.",
+        "description" : "App that allows the user to calculate the accumulated inflation over two periods of time, based the consumer price index (CPI).",
     }
 ]
 
