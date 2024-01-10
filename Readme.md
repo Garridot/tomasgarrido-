@@ -4,8 +4,9 @@ Welcome to my online portfolio! I'm Tomas Garrido, a Backend developer skilled i
 
 ## Screenshots
 
-![Screenshot 1](link-to-image-1.png)
-![Screenshot 2](link-to-image-2.png)
+![Screenshot 1](static/media/banner_1.jpg)
+![Screenshot 2](static/media/banner_2.jpg)
+![Screenshot 3](static/media/banner_3.jpg)
 
 ## Technologies Used
 
