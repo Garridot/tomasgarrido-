@@ -194,19 +194,6 @@ var observerScramble = new IntersectionObserver(function(entries){
 
 observerScramble.observe(document.querySelector(".text-scramble-"));
 
-
-
-
-// ABOUT ME //
-
-var first_page   = document.querySelector(".first_page");
-
-window.addEventListener("scroll",()=>{
-    if(first_page.getBoundingClientRect().top < 500){
-        first_page.querySelector("p").classList.add("show");
-    }
-})
-
 // SKILLS //
 
 const circleText = document.querySelector(".skills-circle h4");
