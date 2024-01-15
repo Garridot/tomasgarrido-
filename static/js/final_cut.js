@@ -110,27 +110,6 @@ navList.forEach(i=>{
 
 // MAIN //
 
-var main    = document.querySelector("main");
-var mainH1  = document.querySelectorAll("main h1");
-var mainP   = document.querySelector("main p");
-
-const mainAppear = ()=>{
-    setTimeout(()=>{
-        for(let i = 0; i < mainH1.length; i++){
-            mainH1[i].style.transform          = "translateY(0%)";
-            mainH1[i].style.opacity            = 1;
-            mainH1[i].style.transitionDelay    = (i / 2) + "s";
-            mainH1[i].style.transitionDuration = "2s"
-        }         
-
-        mainP.style.transform = "rotate(350deg) translateY(0%)";
-        mainP.style.opacity   = 1;
-        mainP.style.transitionDuration = "2s";
-        mainP.style.transitionDelay    =  "1.7s";
-
-
-    },500)
-}
 
 
 
