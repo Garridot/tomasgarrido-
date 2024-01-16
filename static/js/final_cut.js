@@ -110,6 +110,19 @@ navList.forEach(i=>{
 
 // MAIN //
 
+const main     = document.querySelector("main");
+var mainTitles = main.querySelectorAll("h1"); 
+var mainLine   = main.querySelector(".line");
+var mainSub    = main.querySelector(".position-");
+var mainList   = main.querySelector(".main-contact")
+
+
+const mainAnime = ()=>{
+  mainTitles.forEach(i=>{i.style.transform = "translateY(0%)"});
+  setTimeout(()=>{mainLine.style.width = "15%";},1000);  
+  mainSub.style.opacity = 1;
+  mainList.style.opacity = 1;  
+}
 
 
 
@@ -121,7 +134,7 @@ window.onload = ()=>{
         loadpage.style.display    = "none";
         header.classList.add("loaded")
         wrapper.style.display     = "block";
-        mainAppear()
+        setTimeout(()=>{ mainAnime();},1000)
     }, 5000);
 }
 
