@@ -595,6 +595,110 @@ main {
     }
 }
 
+/* #### ABOUTME ####  */
+
+.aboutme--{
+    width: 90%;
+    margin: auto;
+    height: 80vh;
+    display: flex;
+    align-items: center;    
+    position: relative;
+}
+
+.aboutme-circle {
+    position: absolute;
+    bottom: -10vh;
+    right: 0vw;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: scale(.9);
+}
+
+.aboutme-circle h4 {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    animation: rotate 20s linear infinite;    
+    font-family: "GoshaSans-Regular";
+}
+
+.aboutme-circle span {
+    color: #cedddd !important;
+    position: absolute;
+    left: 50%;
+    transform-origin: 0 100px;
+    font-size: .6rem;
+    text-transform: uppercase;
+    font-weight: 100 !important;
+}
+.about_text {
+    margin: 3rem 0 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.aboutme-- .about_text p{
+    font-family: "NeueMontreal-Light";  
+    width: 45%;  
+    line-height: 1.3;      
+    font-size: 1.3rem; 
+    text-indent: 50px;     
+    text-align: justify;
+}
+
+.aboutme-- .about_text p:nth-of-type(1){
+    text-indent: 50px; 
+}
+
+.aboutme-- span{
+    color: #a31f0e;
+    font-weight: 900;
+}
+
+
+@media(max-width:1200px){
+    .aboutme-- .about_text p {        
+        font-size: 1.5rem;        
+    }
+}
+@media(max-width:1000px){
+    .about_text {
+        margin: 3rem 0 0;
+        display: block;
+    }
+    .aboutme-- .about_text p {        
+        width: 70%;      
+    }
+}
+@media(max-width:800px){ 
+    .aboutme-circle {        
+        bottom: -15vh;
+    }   
+    .aboutme-- .about_text p {        
+        width: 100%; 
+        font-size: 1.6rem;      
+    }
+}
+@media(max-width:600px){ 
+    .aboutme-circle {        
+        bottom: -20vh;
+    } 
+    .aboutme-- .about_text p {        
+        width: 100%; 
+        font-size: 1.3rem;      
+    }
+}
+@media(max-width:500px){ 
+    .aboutme-circle {        
+        bottom: -30vh;
+    } 
+}
+
 /* #### TRANSITION-1 #### */
 
 .transition--1 {    

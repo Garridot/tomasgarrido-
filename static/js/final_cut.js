@@ -124,6 +124,15 @@ const mainAnime = ()=>{
   mainList.style.opacity = 1;  
 }
 
+// ABOUTME // 
+
+const circleText1 = document.querySelector(".aboutme-circle h4");
+
+circleText1.innerHTML = circleText1.innerHTML.split("").map(
+   (char,i) =>
+   `<span style='transform:rotate(${i * 10}deg)'>${char}</span>`
+    
+).join("");
 
 
 // LOAD // 
