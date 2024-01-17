@@ -699,114 +699,66 @@ main {
     } 
 }
 
-/* #### TRANSITION-1 #### */
 
-.transition--1 {    
-    width: 90%;
-    margin: auto;
-    margin-top: 20vh;
-    overflow: hidden;
+/**** TRANSITION-1 ****/
+
+.transition--{
+    width: 99%;
+    margin: 50vh auto;
+    height: 200vh;
 }
 
-.transition--1 .data{
-    padding: 2vw 0;
+.transition-data{
     height: 100vh;
-}
-
-.data span{
-    position: relative;
-}
-
-.transition--1 h1{
-    font-size: 15vw;    
-    text-transform: uppercase;
-    white-space: nowrap;    
-    font-family: "NeueMontreal-Italic";   
-    display: flex;
-    margin: 0;
-    transition-duration: 1s;  
-    color: #cedddd;     
-}
-
-.data:nth-child(1) span:nth-child(1) h1{
-    color:  rgb(151, 23, 12);         
-}
-
-.data span:nth-child(2) h1{
-    justify-content: end;
-}
-
-.transition--1 h1::after,
-.transition--1 h1::before{
-    content: attr(data-text);
-    font-size: 15vw;    
-    text-transform: uppercase;
-    white-space: nowrap;   
-    font-family: "NeueMontreal-Italic"; 
-    display: flex;
-    margin: 0;
-    transition-duration: 1s; 
-    position: absolute;    
-    z-index: -1;
-}
-.transition--1 h1.scroll::after{
-    color:  #e91417;   
-    transform: translateX(-3px); 
-}
-.transition--1 h1.scroll::before{
-    color: #30dde7;   
-    transform: translateX(3px);  
-}
-
-
-@media(max-width:600px){
-    .transition--1 .data {        
-        height: 100%;
-    }
-    .transition--1 h1.scroll::after{
-        
-        transform: translateX(-1.5px);   
-    }
-    .transition--1 h1.scroll::before{
-        
-        transform: translateX(1.5px);   
-    }
-}
-
-
-
-/**** TEXT SCRAMBLE ****/
-
-
-
-.scramble-sticky{
-    height: 200vh;    
-    /* margin-bottom: 50vh; */
-}
-
-.text-scramble-{
+    top: 12vh;
     position: sticky;
-    top: 0;
-    width: 80%;    
-    margin: auto;
-    height: 100vh;
+}
+.standout{
+    color: #69090b; 
 }
 
-.scramble-table{
-    height: 100%;    
-    display: table;
+.transition-background{    
+    overflow: hidden;
+    height: 70vh;
+}
+.transition-background .marquee {   
+    overflow-x: hidden;
     width: 100%;
-   
+    --offset: 20vw;
+    --move-initial: calc(-25% + var(--offset));
+    --move-final: calc(-50% + var(--offset)); 
 }
-.scramble-table .scramble-data{
-    display: table-cell;
-    vertical-align: middle;    
-    text-align: end;
+.transition-background .marquee__inner {   
+    width: fit-content;    
+    position: relative;
+    transform: translate3d(0, var(--move-initial), 0);
+    animation: marqueeSkill 20s linear infinite;     
+    transition: all 1s;    
+}
+.transition-background span p{
+    font-size: 6vw;
+    margin: 0;
+    text-transform: uppercase;
+    font-family: "GoshaSans-Regular";
+    white-space: nowrap;
+    color: #8b8b8b;
+    line-height: .8;
+    clip-path: polygon(0 0, 100% 0%, 100% 0, 0 0);
+    will-change: clip-path;
+    transition-duration: 2s;    
+}
+@keyframes marqueeSkill {
+    0% { transform: translate3d(0,var(--move-initial),0); }
+    100% { transform: translate3d(0,var(--move-final), 0); }
 }
 
-.scramble-table .scramble-data p{    
+.scramble-text{
+    margin: 2rem 0 0;
+}
+
+.scramble-text  p{    
     text-transform: uppercase;
-    font-size: 1.2vw;
+    font-size: smaller;
     letter-spacing: 10px;
     font-family: "NeueMontreal-Light";
     line-height: 2;
@@ -814,34 +766,51 @@ main {
     transform: translateY(100%) rotateX(-80deg);
     transform-origin: center top;
     transform-style: preserve-3d;
-    transition: opacity 0s cubic-bezier(.215,.61,.355,1),transform 0s cubic-bezier(.215,.61,.355,1); 
+    transition: opacity 0s cubic-bezier(.215,.61,.355,1),transform 0s cubic-bezier(.215,.61,.355,1);
     opacity: 0;    
 }
 
-.scramble-table .scramble-data p.show{
+.scramble-text p.show{
     opacity: 1;
     transition-duration: .8s;
     transform: none; 
 }
 
-.scramble-table .scramble-data .dud{
+.scramble-text  .dud{
     color: #757575;
 }
 
+
+
+@media(max-width:1250px){
+    .transition-background span p {
+        font-size: 7vw;
+    }    
+}
 @media(max-width:1000px){
-    .scramble-table .scramble-data p{
-        font-size: 2vw;
-    }
+    .transition-background span p {
+        font-size: 7.5vw;
+    }  
+    .scramble-text p {
+        text-transform: uppercase;
+        font-size: small;
+    }  
+}
+
+@media(max-width:600px){    
+    .scramble-text p {       
+        font-size: .6rem;
+    }  
 }
 @media(max-width:500px){
-    .text-scramble-{
-        width: 90%;
+    .transition-background span p {
+        font-size: 9vw;
+    }  
+    .scramble-text  p {
+        font-size: .5rem;
     }
-    .scramble-table .scramble-data p{
-        font-size: 2.5vw;
-        letter-spacing: 5px;
-    }
-}
+} 
+
 
 
 /**** SKILLS  ****/

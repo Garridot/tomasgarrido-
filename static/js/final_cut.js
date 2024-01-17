@@ -149,49 +149,33 @@ window.onload = ()=>{
 
 
 
-// Transition-1 //
 
-var dataText = document.querySelectorAll(".transition--1 span h1");
+const transitionBackground = document.querySelector(".transition-background");
+var transitionText = transitionBackground.querySelectorAll("p");
 
-var data  = document.querySelectorAll(".data");
-const dataPosition = Array.from(data).map(function(e, i) {        
-    return [data[i].getBoundingClientRect().top];
-});
+const transitionAnime = ()=>{
 
+    let position = transitionBackground.getBoundingClientRect().top
+  
+    if(position < 600){
+        transitionText.forEach(i=>{
+        i.style.clipPath= "polygon(0 0, 100% 0%, 100% 100%, 0 100%)";
+        i.style.transitionDelay  = (i/10)  + "s";  
+      });      
+    }   
+} 
 
-
-window.addEventListener('scroll', ()=> {
-    dataText.forEach(i=>{
-        i.classList.add("scroll");
-
-        setTimeout(()=>{
-            i.classList.remove("scroll");
-        },1000)
-    })
-    
-    let value = window.scrollY;       
-    for(var i=0; i < data.length; i++){
-        var dataText1 = data[i].querySelector("span h1");
-        var dataText2 = data[i].querySelector("span:nth-child(2) h1");
-
-        if(data[i].getBoundingClientRect().top < window.innerHeight && data[i].getBoundingClientRect().bottom >= 0) {
-
-            dataText1.style.transform  = "translateX("+ (value - dataPosition[i]) * .02 +"px)"; 
-            dataText2.style.transform  = "translateX(-"+ (value - dataPosition[i]) * .02 +"px)";            
-        }
-    }
-    
-
+window.addEventListener("scroll",()=>{
+    transitionAnime()
 })
-
-
+  
 
 // text scramble effect
 
-var scrambleText1  = [`2001-2023 desing デザイン`];
+var scrambleText1  = [`2001-2024 desing デザイン`];
 var scrambleText2  = [`for a better future 将来`];
 
-var scrambleText    = document.querySelector(".scramble-data p");
+var scrambleText    = document.querySelector(".scramble-text p");
 const scramblespan1 = document.querySelector('.s-text-first');
 const scramblespan2 = document.querySelector('.s-text-second');
 
@@ -214,7 +198,9 @@ var observerScramble = new IntersectionObserver(function(entries){
     },
     { threshold: [1]});
 
-observerScramble.observe(document.querySelector(".text-scramble-"));
+observerScramble.observe(document.querySelector(".scramble-text"));
+
+
 
 // SKILLS //
 
