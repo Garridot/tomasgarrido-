@@ -1080,10 +1080,13 @@ main {
 
 
 /**** SKILLS  ****/
-
+.skills-sticky{
+    height: 200vh;    
+}
 .skills-presentation{
     height: 100vh;
-    position: relative;  
+    position: sticky;
+    top: 0;  
     width: 90%;
     margin: auto;
     margin-top: 10vh;
@@ -1135,7 +1138,7 @@ main {
     position: absolute;
     /* bottom: -10vh; */
     bottom: 8vh;
-    right: 7vw;
+    right: 0vw;
     width: 200px;
     height: 200px;
     border-radius: 50%;
@@ -1171,27 +1174,19 @@ main {
 
 .skills-info{
     position: absolute;
-    /* bottom: -8vh; */
-    bottom: 8vh;
-    
-   
+    bottom: 8vh;   
 }
-
 
 
 .skills-info li{
     font-size: small;    
     color: #adadad;
     font-family: "GoshaSans-Regular";
-    letter-spacing: 5px;
+    letter-spacing: 2px;
     line-height: 2;
     text-transform: uppercase;   
     list-style: none; 
 }
-
-
-
-
 
 @media(max-width:600px){
     .skills-title .marquee span {
@@ -1219,7 +1214,7 @@ main {
 
 .skills--{
     width: 90%;
-    margin: auto; 
+    margin: 100vh auto 50vh; 
     transition: all 1s;
 }
 .skills-boxs{
@@ -1228,8 +1223,7 @@ main {
 
 .skills-- .box{
     position: relative;
-    height: 10vh;
-    /* margin: 6.6vw 0; */
+    height: 10vh;    
     margin: 4.6vw 0;
     transform: translateY(50%);
     opacity: 0;
@@ -1238,12 +1232,9 @@ main {
     position: absolute;
     display: flex;
     font-family: "GoshaSans-Regular";    
-    letter-spacing: 50px;
-    /* color: #cedddd; */
+    letter-spacing: 50px;   
     text-transform: uppercase;    
-    font-size: 5vw;
-   
-    
+    font-size: 5vw;    
 }
 
 
@@ -1275,9 +1266,6 @@ main {
     background: #c7c7c7;
     margin: auto;       
 }
-
-
-
 
 @media(max-width:1200px){
     .skills-- .box {        
@@ -1331,90 +1319,6 @@ main {
     }    
     .skills-- .box h1:nth-child(3).scroll{
         transform : translateY(-5px);        
-    }
-}
-
-
-
-.another-tools {    
-    height: 200vh;
-    position: sticky;
-    top: 0;    
-    
-    transition: all 2s;
-}
-
-.tools-block {
-    height: 100vh;
-    position: sticky;
-    top: 0;
-    display: table;
-    width: 100%;
-}
-
-.tools-table{
-    height: 100%;
-    display: table-cell;
-    vertical-align: middle;
-}
-
-.diverder-tools{
-    height: .5px;
-    background: #afbbbd;
-    width: 0%;
-    float: right;    
-    transition-duration:  2s;
-}
-
-.tools-title {
-    text-align: end;    
-    letter-spacing: 4px;
-}
-
-.tools-title p{
-    padding-top: 1rem;
-    padding-bottom: 3.2rem;    
-    text-transform: uppercase;
-    color: #afbbbd;
-    
-}
-
-ul.tools-ul {
-    padding: 0;
-    position: absolute;
-    bottom: 0;
-    padding-bottom: 2vw;
-    list-style: none;
-    margin: 0;    
-}
-
-.tools-ul li{
-    font-size: .7rem;    
-    color: #adadad;
-    font-family: "GoshaSans-Regular";
-    letter-spacing: 1px;
-    line-height: 2;
-    text-transform: uppercase;        
-}
-
-
-
-
-
-@media(max-width:500px){
-    .another-tools {
-        height: 200vh;
-    }
-    ul.tools-ul {
-        
-        padding-bottom: 10vw;
-        
-    }
-    .tools-title p{
-        font-size: 3vw;
-    }
-    .tools-ul li{
-        font-size: 2.5vw;
     }
 }
 

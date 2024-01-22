@@ -236,14 +236,6 @@ window.addEventListener("scroll",()=>{
 
 // SKILLS //
 
-const circleText = document.querySelector(".skills-circle h4");
-
-circleText.innerHTML = circleText.innerHTML.split("").map(
-   (char,i) =>
-   `<span style='transform:rotate(${i * 10}deg)'>${char}</span>`
-    
-).join("");
-
 var skills      = document.querySelector(".skills--");
 var skillsBoxs  = document.querySelector(".skills-- .skills-boxs");
 var sboxs       = document.querySelectorAll(".skills-- .box");
@@ -304,19 +296,13 @@ window.addEventListener("scroll",()=>{
 });
 
 
+const circleText = document.querySelector(".skills-circle h4");
 
-var anotherTools = document.querySelector(".another-tools");
-
-
-window.addEventListener("scroll",()=>{
-    if(anotherTools.getBoundingClientRect().top <= 0){
-        
-        anotherTools.querySelector(".diverder-tools").style.width = "100%";
-    }else{
-        
-        anotherTools.querySelector(".diverder-tools").style.width = "0%";
-    }
-})
+circleText.innerHTML = circleText.innerHTML.split("").map(
+   (char,i) =>
+   `<span style='transform:rotate(${i * 10}deg)'>${char}</span>`
+    
+).join("");
 
 
 // CONTACT //
@@ -383,7 +369,7 @@ let observer = new IntersectionObserver((entries, observer) => {
 
 observer.observe(main);
 observer.observe(document.querySelector(".aboutme--"));
-observer.observe(document.querySelector(".skills-sticky"));
+// observer.observe(document.querySelector(".skills-sticky"));
 observer.observe(skills);
 observer.observe(contact);
 
