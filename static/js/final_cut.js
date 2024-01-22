@@ -1,3 +1,11 @@
+// GLOBALS FUNTIONS //
+
+const isElementVisible = (element,threshold)=>{    
+    const rect = element.getBoundingClientRect();
+    return rect.top < threshold  
+};
+  
+
 // CURSOR //
 
 var cursor         = document.querySelector(".cursor");
@@ -103,11 +111,6 @@ navList.forEach(i=>{
 })
 
 
-
-
-
-
-
 // MAIN //
 
 const main     = document.querySelector("main");
@@ -201,6 +204,35 @@ var observerScramble = new IntersectionObserver(function(entries){
 observerScramble.observe(document.querySelector(".scramble-text"));
 
 
+// PROJECTS //
+
+
+var projectCard = document.querySelectorAll(".project-card");
+
+const projectsAnime = ()=>{
+    if(isElementVisible(projectCard[0],600)){        
+        projectCard[0].querySelector(".media").style.clipPath = "polygon(70% 0, 100% 0, 100% 100%, 70% 100%)";
+        projectCard[0].querySelector(".media").style.transition = "all 1.5s";
+    }
+    if(isElementVisible(projectCard[1],600)){        
+        projectCard[1].querySelector(".media").style.clipPath = "polygon(0% 0, 30% 0, 30% 100%, 0% 100%)";
+        projectCard[1].querySelector(".media").style.transition = "all 1.5s";
+    }
+    if(isElementVisible(projectCard[2],600)){        
+        projectCard[2].querySelector(".media").style.clipPath = "polygon(20% 0, 50% 0, 50% 100%, 20% 100%)";
+        projectCard[2].querySelector(".media").style.transition = "all 1.5s";
+    }
+    if(isElementVisible(projectCard[3],600)){        
+        projectCard[3].querySelector(".media").style.clipPath = "polygon(70% 0, 100% 0, 100% 100%, 70% 100%)";
+        projectCard[3].querySelector(".media").style.transition = "all 1.5s";
+    }
+} 
+
+window.addEventListener("scroll",()=>{
+    projectsAnime()
+})
+    
+
 
 // SKILLS //
 
@@ -287,142 +319,6 @@ window.addEventListener("scroll",()=>{
 })
 
 
-
-
-// PROJECTS //
-
-
-var projectTitle  = document.querySelector(".projects-presentation");
-var projectsh1    = document.querySelectorAll(".projects-presentation h1");
-var projectsKanji = document.querySelector(".projects-kanji");
-
-
-
-window.addEventListener("scroll",()=>{
-    
-    if(projectTitle.getBoundingClientRect().top <= 0){
-        for(let i = 0;i < projectsh1.length;i++){
-            projectsh1[i].style.transform = "translateX(0%)";
-            projectsh1[i].style.transitionDelay = (i/5)+"s";
-            projectsh1[i].style.opacity = 1;
-        }
-
-        projectsKanji.style.opacity = 1;
-        
-    }else{
-        for(let i = 0;i < projectsh1.length;i++){
-            projectsh1[i].style.transform = "translateX(-20%)";
-            projectsh1[i].style.transitionDelay = (i/5)+"s";
-            projectsh1[i].style.opacity = 0;
-        }
-        projectsKanji.style.opacity = 0;     
-    }
-})
-
-
-var projectsList = document.querySelector(".projects--");
-
-const upateProject = (project) => {
-    var title   = projects[0].querySelector(".title-- h5");
-    var skills  = projects[0].querySelector(".tech-skills span");
-    var img     = projects[0].querySelector(".project-img");
-    var URLSITE = projects[0].querySelector(".links a:nth-of-type(1)");
-    var URLCODE = projects[0].querySelector(".links a:nth-of-type(2)");
-    var description = projects[0].querySelector(".description-- p");
-
-    title.innerHTML  = project.name;
-    skills.innerHTML = project.skills;
-
-    img.style.background         = `url(${project.image})`;
-    img.style.backgroundSize     = "cover";
-    img.style.backgroundPosition = "center";
-
-    URLCODE.href = project.URL_CODE;
-    URLSITE.href = project.URL_SITE;
-
-    description.innerHTML = project.description
-
-}
-
-const projectsData = [
-    {
-        "name"        : "Football Players Charts",
-        "skills"      : "Skills: Python ● Django RestFramework ● Flask ● Pandas ● JWT  ● YAML ● HTML ● CSS ● Javascript ● Chart.js",
-        "URL_CODE"    : "https://github.com/Garridot/football-players-stats-api",
-        "URL_SITE"    : "https://football-players-charts.onrender.com/",
-        "image"       : "/static/media/banner.png",
-        "description" : `This is a Django Rest Framework API that scrapes stats from Transfermarkt to manage and analyze football players' performance.<br>
-        It comes with a complementary Flask web app called "Football Player Charts" that enables users to explore and analyze statistics interactively using charts.`,
-    },
-    {
-        "name"        : "E-commerce Project",
-        "skills"      : "Skills: Python ● Django RestFramework ● HTML ● CSS ● bootstrap ● Javascript ● PayPal API",
-        "URL_CODE"    : "https://github.com/Garridot/Ruins-of-Versailles_Ecommerce-Project",
-        "URL_SITE"    : "https://ruins-of-versailles-7rbc.onrender.com/",
-        "image"       : "https://raw.githubusercontent.com/Garridot/Ruins-of-Versailles_Ecommerce-Project/main/project_images/image__1.png",
-        "description" : 
-        `Development of a REST API using Django Rest Framework, which provides the necessary functionality for an e-commerce website.<br> 
-        The order value is displayed in Argentine pesos and US dollars with PayPal as the payment method.`,
-    },
-    {
-        "name"        : "Inflation Calculator",
-        "skills"      : "Skills: Python ● Django RestFramework ● HTML ● CSS ● bootstrap  ● Javascript",
-        "URL_CODE"    : "https://github.com/Garridot/inflation_calculator",
-        "URL_SITE"    : "https://inflation-calculator-arg-x4iu.onrender.com/",
-        "image"       : "/static/media/project__3.jpg",
-        "description" : "App that allows the user to calculate the accumulated inflation over two periods of time, based the consumer price index (CPI).",
-    }
-]
-
-
-for (var i = 0; i < projectsData.length; i++) {
-    var project = document.createElement("div");
-    project.className = "project"; 
-    projectsList.appendChild(project);   
-}
-
-var projects = document.querySelectorAll(".project");
-
-projects[0].innerHTML = 
-`
-<div class="data--">
-    <div class="tags--">
-        <div class="tech-skills">
-            <span>${projectsData[0].skills}</span>
-        </div>                        
-    </div>
-    <div class="project-img"></div>
-    <div class="proj--text">
-        <div class="title--">
-            <h5>${projectsData[0].name}</h5>
-            <div class="links">
-                <a href="${projectsData[0].URL_SITE}" target="_blank">view project</a>
-                <a href="${projectsData[0].URL_CODE}" target="_blank">view code</a>
-            </div>
-        </div>
-        <div class="description--">
-            <p>${projectsData[0].description}</p>
-        </div>
-    </div>
-</div>  
-`
-
-// Function to update project content
-const updateProjectContent = () => {
-    projects.forEach((project, index) => {
-        if (project.getBoundingClientRect().top == 0) {
-            upateProject(projectsData[index]);
-        }
-    });
-};
-
-// Event listener for scroll
-window.addEventListener('scroll', updateProjectContent);
-
-
-
-
-
 // CONTACT //
 
 var contact           = document.querySelector(".contact--");
@@ -486,10 +382,9 @@ let observer = new IntersectionObserver((entries, observer) => {
 // Iterate over the selected elements and start observing each target
 
 observer.observe(main);
-observer.observe(document.querySelector("#aboutme--"));
+observer.observe(document.querySelector(".aboutme--"));
 observer.observe(document.querySelector(".skills-sticky"));
 observer.observe(skills);
-observer.observe(document.querySelector(".projects-content"));
 observer.observe(contact);
 
 
