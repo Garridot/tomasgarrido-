@@ -335,46 +335,6 @@ window.addEventListener("scroll", ()=>{
 
 
 
-// SECTION TITLE UPDATE //
-
-var sectionTitle = document.querySelector(".div-title h6");
-
-
-// Create a new IntersectionObserver
-let observer = new IntersectionObserver((entries, observer) => {
-    entries.forEach(entry => {
-      // Check if the target element is intersecting      
-      if (entry.isIntersecting) {        
-        if(entry.target.className == "main"){
-            sectionTitle.innerHTML = "Tomas Garrido | Python Developer";
-        }
-        if(entry.target.id == "aboutme--"){
-            sectionTitle.innerHTML = "About me";
-        }
-        if(entry.target.className == "skills-sticky" | entry.target.className == "skills--"){
-            sectionTitle.innerHTML = "Skills";
-        }
-        if(entry.target.className == "projects-content"){
-            sectionTitle.innerHTML = "Projects";
-        }
-        if(entry.target.className == "contact--"){
-            sectionTitle.innerHTML = "Contact";
-        }
-      }
-    });
-  });  
-
-
-// Iterate over the selected elements and start observing each target
-
-observer.observe(main);
-observer.observe(document.querySelector(".aboutme--"));
-// observer.observe(document.querySelector(".skills-sticky"));
-observer.observe(skills);
-observer.observe(contact);
-
-
-
 
 
 
